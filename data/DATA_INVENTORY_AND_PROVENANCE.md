@@ -27,6 +27,10 @@ RAW ASSET LEDGER
 ├──────────────────────────────┼──────────────────┼───────────┼──────────────────────────────────────────────────────────────────┤
 │ Occurrence_database.xlsx     │ Native Excel     │ 44,748    │ d3eb51d6a4f892d376409bb40af7511a97e9027c98a3281f39b530b78f7577f9│
 │ WB_equivalent_taxonomy.csv   │ Native CSV (UTF8)│ 638       │ f51ad7d4f1c82cf71349c381e8e169ee25684966f6a501309cbc6dabe0573de1│
+│ galapagos_valente_2015/      │ Native CSV (UTF8)│ 393       │ 15c68ec333ce6350d1f44a304b50b2c68b329c35c25f13555a785c4b7c6678ae│
+│   Galapagos_datatable.csv    │                  │           │                                                                  │
+│ galapagos_valente_2015/      │ JSON             │ 1,516     │ 3ec04c04aae7895cf4e0aa7a19282adb03d5c361cd12f9975f1e138af8035e92│
+│   Galapagos_avifauna.json    │                  │           │                                                                  │
 └──────────────────────────────┴──────────────────┴───────────┴──────────────────────────────────────────────────────────────────┘
 ```
 
