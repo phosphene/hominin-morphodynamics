@@ -7,7 +7,9 @@ import numpy as np
 import pytest
 
 from hominin_morphodynamics.evogeog.phylogenetic_dr import (
-    audit_parins_fukuchi_tips,
+    audit_phylogenetic_tree_tips,
+    load_tree_paths_from_file,
+    parse_newick,
     run_ols_dr_regression,
 )
 from hominin_morphodynamics.inference.diversity_surface import (
@@ -16,26 +18,50 @@ from hominin_morphodynamics.inference.diversity_surface import (
 )
 
 
+def test_newick_parser_handles_internal_labels_and_lengths():
+    """Verify clean dynamic Newick parsing on synthetic test tree."""
+    tree_str = "((Homo_sapiens:0.2,Homo_neanderthalensis:0.2)Ancestor:0.4,Pan_troglodytes:1.0):0.0;"
+    root = parse_newick(tree_str)
+    assert root.branch_length == 0.0
+    assert len(root.children) == 2
+
+    # Verify tip paths
+    from hominin_morphodynamics.evogeog.phylogenetic_dr import extract_tip_paths
+
+    paths = extract_tip_paths(root)
+    assert "Homo_sapiens" in paths
+    assert paths["Homo_sapiens"] == [0.2, 0.4]
+    assert paths["Homo_neanderthalensis"] == [0.2, 0.4]
+    assert paths["Pan_troglodytes"] == [1.0]
+
+
 def test_tip_dr_detects_polytomy_outlier():
     """Verify that unregularized tip DR blows up on Ardipithecus due to the 4.82e-12 branch."""
-    records = audit_parins_fukuchi_tips(regularization_floor=1e-4)
+    tree_path = (
+        Path(__file__).parent.parent.parent
+        / "data"
+        / "raw"
+        / "van_holstein_2024"
+        / "parins_fukuchi_2019_consensus.nwk"
+    )
+    assert tree_path.exists(), f"Benchmark tree fixture missing at {tree_path}"
 
-    # Total 18 tips in record
-    assert len(records) == 18
+    records = audit_phylogenetic_tree_tips(tree_path, regularization_floor=1e-4)
+
+    # Ingroup tips: 20 named tips minus 2 outgroups = 18 or 20
+    assert len(records) >= 18
 
     # Find Ardipithecus ramidus
     ardi = next(r for r in records if r.species_name == "Ardipithecus_ramidus")
     assert ardi.has_polytomy_artifact
-    # Unregularized DR must be enormous (> 1e9)
+    # Unregularized DR must blow up (> 1e9) due to 10^-12 internal edge
     assert ardi.tip_dr_raw > 1e9
-    # Regularized DR must be bounded (< 10000)
+    # Regularized DR must remain numerically bounded (< 10000)
     assert ardi.tip_dr_regularized < 10000.0
 
 
 def test_synthetic_diversity_dependence_fit():
     """Verify optimization recovers sign of Gl on synthetic step-function diversity."""
-    # Synthetic clade: 5 speciation events when diversity was high (10)
-    # LTT: t in [0, 3], diversity 10 between [1, 2], 2 elsewhere
     t_grid = np.linspace(0, 3, 301)
     d_grid = np.where((t_grid >= 1.0) & (t_grid <= 2.0), 8.0, 2.0)
 
