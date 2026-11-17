@@ -4,6 +4,35 @@ This module models the chronostratigraphic occurrence records, stage-level
 richness dynamics, and faunal boundary persistence of pedunculated cirripedes
 documented in Charles Darwin's foundational 1851 monograph.
 
+Genealogy of Methods: Darwin's Inferential Arithmetic to Modern Range Metrics:
+-----------------------------------------------------------------------------
+1. Darwin's Tabular Range Method (1851):
+   In his master distribution table (p. 14 of 'Fossil Lepadidae'), Darwin introduced
+   a discrete matrix of occurrence indicators across stratigraphically ordered columns:
+   Lower Oolite, Middle Oolite, Lower Greensand, Gault, Upper Greensand, Chalk Marl,
+   Lower Chalk, Upper Chalk, Maestricht Formation, and Tertiary.
+   
+   Darwin calculated two primary quantities directly from this table:
+   a. Stage-Level Sums: The vertical summation of verified presences per stage, establishing
+      the Cretaceous peak (9-10 species in Maestricht, 9-12 in Upper Chalk) versus the
+      Jurassic Oolitic scarcity (1-2 species).
+   b. Species-to-Individual Inverse Ratio: Darwin explicitly observed that high specific
+      richness in a horizon did not correlate with specimen abundance (citing Mr. Fitch's
+      20 years of collecting near Norwich yielding only 9 keels of Scalpellum maximum and
+      6 of S. fossula), cautioning against conflating taxonomic diversity with biomass.
+   c. Vertical-to-Horizontal Range Invariant: Darwin reasoned from living cirripedes:
+      "If fossil cirripedia had, like most recent species, very wide horizontal or
+      geographical ranges, then, in accordance with a law now generally admitted, a
+      considerable vertical range in some of the species is not improbable."
+
+2. Evolution into Modern Quantitative Biostratigraphy:
+   Darwin's tabular range calculations represent the direct historical precursor to:
+   - Lyellian percentage dating (measuring faunal survival ratios across horizons).
+   - Range-Through and Boundary-Crosser matrices in quantitative paleobiology (Sepkoski 1975,
+     Foote 2000, Alroy 2008), where standing richness N_tot = N_b + N_t + N_bt + N_FL.
+   - Profile Boundary Persistence: Computing Jaccard / Simpson faunal similarity
+     coefficients across chronostratigraphic disconformities.
+
 Mathematical Formulation & Dimensional Accounting:
 --------------------------------------------------
 Let S = {s_1, s_2, ..., s_n} be the set of cataloged fossil species (n = 35) and
