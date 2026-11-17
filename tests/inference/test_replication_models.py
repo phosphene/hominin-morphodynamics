@@ -1,0 +1,81 @@
+"""Tests for phylogenetic tip DR auditing and diversity-dependence likelihood surfaces."""
+
+from __future__ import annotations
+
+from pathlib import Path
+import numpy as np
+import pytest
+
+from hominin_morphodynamics.evogeog.phylogenetic_dr import (
+    audit_parins_fukuchi_tips,
+    run_ols_dr_regression,
+)
+from hominin_morphodynamics.inference.diversity_surface import (
+    audit_van_holstein_empirical_grid,
+    fit_diversity_dependence,
+)
+
+
+def test_tip_dr_detects_polytomy_outlier():
+    """Verify that unregularized tip DR blows up on Ardipithecus due to the 4.82e-12 branch."""
+    records = audit_parins_fukuchi_tips(regularization_floor=1e-4)
+
+    # Total 18 tips in record
+    assert len(records) == 18
+
+    # Find Ardipithecus ramidus
+    ardi = next(r for r in records if r.species_name == "Ardipithecus_ramidus")
+    assert ardi.has_polytomy_artifact
+    # Unregularized DR must be enormous (> 1e9)
+    assert ardi.tip_dr_raw > 1e9
+    # Regularized DR must be bounded (< 10000)
+    assert ardi.tip_dr_regularized < 10000.0
+
+
+def test_synthetic_diversity_dependence_fit():
+    """Verify optimization recovers sign of Gl on synthetic step-function diversity."""
+    # Synthetic clade: 5 speciation events when diversity was high (10)
+    # LTT: t in [0, 3], diversity 10 between [1, 2], 2 elsewhere
+    t_grid = np.linspace(0, 3, 301)
+    d_grid = np.where((t_grid >= 1.0) & (t_grid <= 2.0), 8.0, 2.0)
+
+    # Events clustered during high-diversity phase
+    ts_pos = [1.2, 1.4, 1.5, 1.6, 1.8]
+    res_pos = fit_diversity_dependence(
+        speciation_times_ma=ts_pos,
+        ltt_time_grid_ma=t_grid,
+        ltt_diversity_grid=d_grid,
+        t_max_eval_ma=3.0,
+    )
+
+    # MLE of Gl should be positive
+    assert res_pos.mle_gl > 0.0
+    assert res_pos.full_loglik >= res_pos.null_loglik
+
+
+def test_empirical_van_holstein_pyrate_grid():
+    """Verify empirical likelihood-ratio test across PyRate outputs confirms p >= 0.05 for Homo."""
+    outputs_dir = (
+        Path(__file__).parent.parent.parent.parent.parent
+        / "marsyas6"
+        / "papers"
+        / "valence-ingress"
+        / "data"
+        / "van-holstein"
+        / "Data_Code_Final"
+        / "PyRate"
+        / "Outputs"
+    )
+
+    if not outputs_dir.exists():
+        pytest.skip(f"PyRate outputs dir not found at {outputs_dir}")
+
+    results = audit_van_holstein_empirical_grid(outputs_dir)
+    assert len(results) >= 15  # 5 configs x 3 groups
+
+    # Every Homo configuration must fail to reject null at alpha=0.05
+    homo_results = [r for r in results if r.clade_group == "Homo"]
+    assert len(homo_results) == 5
+    for r in homo_results:
+        assert r.p_value >= 0.05, f"{r.config_name} Homo p-value ({r.p_value}) is unexpectedly < 0.05"
+        assert not r.is_significant_at_05
