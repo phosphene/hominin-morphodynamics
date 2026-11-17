@@ -54,19 +54,24 @@ def fit_diversity_dependence(
     t_max_eval_ma: float = 3.0,
     config_name: str = "custom",
     clade_group: str = "all",
+    is_per_lineage_process: bool = True,
 ) -> DiversityModelResult:
     """Fit exponential diversity-dependence model and run Likelihood-Ratio Test against null (Gl=0).
 
-    Model:
-        lambda(D(t)) = lambda0 * exp(Gl * D(t))
+    Mathematical Formulation (Silvestro et al. 2014 Syst Biol, Etienne et al. 2012):
+        Per-lineage speciation rate:
+            lambda(D(t)) = lambda0 * exp(Gl * D(t))
+        Clade-wide speciation hazard:
+            Lambda_clade(t) = D(t) * lambda(D(t))  [if is_per_lineage_process]
+            Lambda_clade(t) = lambda(D(t))          [if aggregate point process]
 
     Log-Likelihood:
-        ln L = sum_{i=1}^N ln lambda(D(ts_i)) - integral_0^T lambda(D(t)) dt
+        ln L = sum_{i=1}^N ln Lambda_clade(ts_i) - integral_0^T Lambda_clade(t) dt
 
     Invariants:
         1. lambda0 > 0.
         2. Gl is unconstrained in [-10, 10].
-        3. Under null model (Gl = 0), lambda0_mle = N / T_eval.
+        3. Under null model (Gl = 0), analytic MLE lambda0 is recovered.
     """
     ts_arr = np.array(speciation_times_ma)
     n_sp = len(ts_arr)
@@ -92,15 +97,19 @@ def fit_diversity_dependence(
     dt = np.diff(t_grid)[mask]
     d_eval = d_grid[:-1][mask]
 
+    # Base scaling for per-lineage vs aggregate
+    scale_events = np.log(np.maximum(1.0, d_at_events)) if is_per_lineage_process else np.zeros_like(d_at_events)
+    scale_grid = d_eval if is_per_lineage_process else np.ones_like(d_eval)
+
     def profile_gl(gl: float) -> tuple[float, float]:
         """Profile likelihood over Gl by solving lambda0 analytically."""
         g_d_events = np.clip(gl * d_at_events, -50.0, 50.0)
         g_d_grid = np.clip(gl * d_eval, -50.0, 50.0)
-        integral_factor = float(np.sum(np.exp(g_d_grid) * dt))
+        integral_factor = float(np.sum(scale_grid * np.exp(g_d_grid) * dt))
         if integral_factor <= 0.0 or not np.isfinite(integral_factor):
             return -1e12, 1e-5
         l0 = max(1e-6, n_sp / integral_factor)
-        ll = float(np.sum(np.log(l0) + g_d_events) - l0 * integral_factor)
+        ll = float(np.sum(np.log(l0) + scale_events + g_d_events) - l0 * integral_factor)
         return ll, l0
 
     # 1. Null Model (Gl = 0.0)
