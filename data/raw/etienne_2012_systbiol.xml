@@ -1,0 +1,518 @@
+<?xml version="1.0"  ?><!DOCTYPE pmc-articleset PUBLIC "-//NLM//DTD ARTICLE SET 2.0//EN" "https://dtd.nlm.nih.gov/ncbi/pmc/articleset/nlm-articleset-2.0.dtd"><pmc-articleset><article article-type="research-article" xml:lang="en" dtd-version="1.4"><front><journal-meta><journal-id journal-id-type="nlm-ta">Syst Biol</journal-id><journal-id journal-id-type="iso-abbrev">Syst. Biol</journal-id><journal-id journal-id-type="pmc-domain-id">775</journal-id><journal-id journal-id-type="pmc-domain">sysbio</journal-id><journal-id journal-id-type="nlm-id">9302532</journal-id><journal-id journal-id-type="publisher-id">sysbio</journal-id><journal-title-group><journal-title>Systematic Biology</journal-title></journal-title-group><issn pub-type="ppub">1063-5157</issn><issn pub-type="epub">1076-836X</issn><publisher><publisher-name>Oxford University Press</publisher-name></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">PMC3280041</article-id><article-id pub-id-type="pmcid-ver">PMC3280041.1</article-id><article-id pub-id-type="pmcaid">3280041</article-id><article-id pub-id-type="pmcaiid">3280041</article-id><article-id pub-id-type="pmid">21873376</article-id><article-id pub-id-type="doi">10.1093/sysbio/syr091</article-id><article-version article-version-type="pmc-version">1</article-version><article-categories><subj-group subj-group-type="heading"><subject>Regular Articles</subject></subj-group></article-categories><title-group><article-title>Prolonging the Past Counteracts the Pull of the Present: Protracted
+Speciation Can Explain Observed Slowdowns in Diversification</article-title></title-group><contrib-group><contrib contrib-type="author"><name name-style="western"><surname>Etienne</surname><given-names initials="RS">Rampal S.</given-names></name><xref ref-type="aff" rid="aff1">1</xref><xref ref-type="corresp" rid="cor1">*</xref></contrib><contrib contrib-type="author"><name name-style="western"><surname>Rosindell</surname><given-names initials="J">James</given-names></name><xref ref-type="aff" rid="aff1">1</xref><xref ref-type="aff" rid="aff2">2</xref></contrib></contrib-group><aff id="aff1">
+<label>1</label>Community and Conservation Ecology Group, Centre for Ecological and
+Evolutionary Studies, University of Groningen, Box 11103, 9700 CC Groningen, The
+Netherlands</aff><aff id="aff2">
+<label>2</label>Institute of Integrative and Comparative Biology, University of Leeds, Leeds
+LS2 9JT, UK</aff><author-notes><corresp id="cor1"><label>*</label>Correspondence to be sent to: Community and Conservation Ecology Group,
+Centre for Ecological and Evolutionary Studies, University of Groningen, Box 11103, 9700
+CC Groningen, The Netherlands; E-mail: <email>r.s.etienne@rug.nl</email>.</corresp><fn><p>
+<italic toggle="yes">Associate Editor: Tiffani Williams</italic>
+</p></fn></author-notes><pub-date pub-type="ppub"><month>3</month><year>2012</year></pub-date><pub-date pub-type="epub" iso-8601-date="2012-03-01"><month>3</month><year>2012</year></pub-date><volume>61</volume><issue>2</issue><issue-id pub-id-type="pmc-issue-id">205628</issue-id><fpage>204</fpage><lpage>213</lpage><history><date date-type="received"><day>12</day><month>6</month><year>2010</year></date><date date-type="rev-recd"><day>20</day><month>10</month><year>2010</year></date><date date-type="accepted"><day>11</day><month>5</month><year>2011</year></date></history><pub-history><event event-type="pmc-release"><date><day>01</day><month>03</month><year>2012</year></date></event><event event-type="pmc-live"><date><day>01</day><month>03</month><year>2012</year></date></event><event event-type="pmc-last-change"><date iso-8601-date="2018-03-28 04:31:50.253"><day>28</day><month>03</month><year>2018</year></date></event></pub-history><permissions><copyright-statement>© The Author(s) 2011. Published by Oxford University Press, on behalf
+of the Society of Systematic Biologists. All rights reserved.</copyright-statement><copyright-year>2012</copyright-year><license xmlns:xlink="http://www.w3.org/1999/xlink" license-type="cc-by-nc" xlink:href="http://creativecommons.org/licenses/by-nc/3.0"><ali:license_ref xmlns:ali="http://www.niso.org/schemas/ali/1.0/" specific-use="textmining" content-type="ccbynclicense">https://creativecommons.org/licenses/by-nc/3.0/</ali:license_ref><license-p>This is an Open Access article distributed under the terms of the Creative
+Commons Attribution Non-Commercial License
+(<ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc/3.0">http://creativecommons.org/licenses/by-nc/3.0</ext-link>), which permits unrestricted
+non-commercial use, distribution, and reproduction in any medium, provided the original
+work is properly cited.</license-p></license></permissions><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" content-type="pmc-pdf" xlink:href="syr091.pdf"/><self-uri xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="syr091.pdf"/><abstract><title>Abstract</title><p>Phylogenetic trees show a remarkable slowdown in the increase of number of lineages
+towards the present, a phenomenon which cannot be explained by the standard birth–death
+model of diversification with constant speciation and extinction rates. The birth–death
+model instead predicts a constant or accelerating increase in the number of lineages,
+which has been called the pull of the present. The observed slowdown has been attributed
+to nonconstancy of the speciation and extinction rates due to some form of diversity
+dependence (i.e., species-level density dependence), but the mechanisms underlying this
+are still unclear. Here, we propose an alternative explanation based on the simple concept
+that speciation takes time to complete. We show that this idea of “protracted” speciation
+can be incorporated in the standard birth–death model of diversification. The protracted
+birth–death model predicts a realistic slowdown in the rate of increase of number of
+lineages in the phylogeny and provides a compelling fit to four bird phylogenies with
+realistic parameter values. Thus, the effect of recognizing the generally accepted fact
+that speciation is not an instantaneous event is significant; even if it cannot account
+for all the observed patterns, it certainly contributes substantially and should therefore
+be incorporated into future studies.</p></abstract><kwd-group><kwd>Birth–death model</kwd><kwd>pull of the present</kwd><kwd>pull of the recent</kwd><kwd>protracted speciation</kwd><kwd>diversity dependence</kwd></kwd-group><counts><page-count count="10"/></counts><custom-meta-group><custom-meta><meta-name>pmc-status-qastatus</meta-name><meta-value>0</meta-value></custom-meta><custom-meta><meta-name>pmc-status-live</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-status-embargo</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-status-released</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-open-access</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-olf</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-manuscript</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-legally-suppressed</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-pdf</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-has-supplement</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-pdf-only</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-suppress-copyright</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-real-version</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-is-scanned-article</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-preprint</meta-name><meta-value>no</meta-value></custom-meta><custom-meta><meta-name>pmc-prop-in-epmc</meta-name><meta-value>yes</meta-value></custom-meta><custom-meta><meta-name>pmc-license-ref</meta-name><meta-value>CC BY-NC</meta-value></custom-meta></custom-meta-group></article-meta></front><body><p>The temporal pattern of diversification has been of scientific interest for a long time
+(<xref rid="bib41" ref-type="bibr">Yule 1924</xref>; <xref rid="bib33" ref-type="bibr">Raup
+et al. 1973</xref>). Over the last two decades, methods have been developed to infer
+diversification rates from phylogenies (<xref rid="bib20" ref-type="bibr">Nee et al.
+1992</xref>; <xref rid="bib10" ref-type="bibr">Harvey et al. 1994</xref>; <xref rid="bib18" ref-type="bibr">Nee et al. 1994a</xref>, <xref rid="bib19" ref-type="bibr">Nee
+et al. 1994b</xref>; <xref rid="bib29" ref-type="bibr">Pybus and Harvey 2000</xref>; <xref rid="bib16" ref-type="bibr">Nee 2001</xref>; <xref rid="bib34" ref-type="bibr">Ricklefs
+2007</xref>). Even though phylogenies may ultimately not be sufficient to accurately
+estimate speciation and/or extinction rates (<xref rid="bib22" ref-type="bibr">Paradis
+2003</xref>, <xref rid="bib23" ref-type="bibr">Paradis 2004</xref>: <xref rid="bib7" ref-type="bibr">Etienne and Apol 2009</xref>: <xref rid="bib30" ref-type="bibr">Rabosky
+2010</xref>), the plot of the number of lineages in the phylogeny versus time, that is, the
+lineages-through-time (LTT) plot (<xref rid="bib20" ref-type="bibr">Nee et al. 1992</xref>:
+<xref rid="bib10" ref-type="bibr">Harvey et al. 1994</xref>: <xref rid="bib29" ref-type="bibr">Pybus and Harvey 2000</xref>: <xref rid="bib24" ref-type="bibr">Phillimore and
+Price 2008</xref>), often shows a remarkable slowdown towards the present (<xref rid="bib15" ref-type="bibr">McPeek 2008</xref>; <xref rid="bib24" ref-type="bibr">Phillimore
+and Price 2008</xref>; <xref rid="bib31" ref-type="bibr">Rabosky and Lovette 2008</xref>).
+In contrast, the standard birth–death model of diversification (<xref rid="bib13" ref-type="bibr">Kendall 1948</xref>; <xref rid="bib33" ref-type="bibr">Raup et al. 1973</xref>;
+<xref rid="bib18" ref-type="bibr">Nee et al. 1994a</xref>) shows an upward turn towards the
+present, which has been called the pull of the present (<xref rid="bib19" ref-type="bibr">Nee
+et al. 1994b</xref>). To avoid possible confusion, the pull of the present is a phenomenon
+that is distinct from the pull of the recent (<xref rid="bib32" ref-type="bibr">Raup
+1979</xref>; <xref rid="bib12" ref-type="bibr">Jablonski et al. 2003</xref>; <xref rid="bib17" ref-type="bibr">Nee 2006</xref>), which describes the apparently increased rate
+of diversification seen in the fossil record caused by more complete sampling of recent (and
+still extant) species. The pull of the present in LTT plots is purely a theoretical
+phenomenon, a property of the standard birth–death model of diversification. It results from
+the fact that lineages arising in the recent past are less likely to have become extinct and
+therefore are more likely to be represented in the phylogeny than lineages arising in the more
+distant past.</p><p>Two explanations of the observed slowdown in LTT plots have been offered. The first is that
+it is due to a sampling artifact. Two sampling artifacts have been identified. <xref rid="bib19" ref-type="bibr">Nee et al. (1994b)</xref> showed that taking a small sample from
+the actual phylogeny produces this slowdown; it transforms the upward turn predicted by the
+model into a downward turn. More recently, <xref rid="bib28" ref-type="bibr">Purvis et al.
+(2009)</xref> argued, on the basis of simulations with the pure birth (i.e., without
+extinctions, <xref rid="bib41" ref-type="bibr">Yule 1924</xref>) model, that an apparent
+slowdown will be observed if there is age dependency in whether nodes are deemed to be
+speciation events. Sampling effects cannot explain, however, observed slowdowns in (nearly)
+complete phylogenies (<xref rid="bib24" ref-type="bibr">Phillimore and Price 2008</xref>). The
+second explanation is diversity dependence, that is, species-level density dependence (<xref rid="bib24" ref-type="bibr">Phillimore and Price 2008</xref>), the per species speciation
+and/or extinction rates are not constant as in the standard birth–death model but decrease
+with time due to niche filling (<xref rid="bib38" ref-type="bibr">Schluter 2000</xref>; <xref rid="bib35" ref-type="bibr">Ricklefs 2010</xref> ). Although this is certainly a
+possibility, it has also been argued that in contrast, new species may actually create new
+niches (<xref rid="bib21" ref-type="bibr">Odling-Smee et al. 2003</xref>).</p><p>Here, we offer an alternative explanation of the slowdown which is an extension of the
+standard birth–death model in which speciation is assumed not to take place instantaneously
+but is allowed to take time. There is general agreement that speciation takes time (<xref rid="bib2" ref-type="bibr">Avise 1999</xref>). Speciation requires reproductive isolation,
+which could be either prezygotic (e.g., due to mate choice) or postzygotic (e.g., due to
+reduced hybrid fitness). Both prezygotic and postzygotic isolations are correlated with
+genetic distance between pairs of species, which is a strong indicator of time since
+divergence between the species (<xref rid="bib6" ref-type="bibr">Coyne and Orr 2004</xref>).
+There is clear evidence that a considerable amount of time may be needed to create the genetic
+distance required to distinguish two `good' species. For example, fertile and viable hybrids
+can exist for millions of years since the initial divergence (<xref rid="bib6" ref-type="bibr">Coyne and Orr 2004</xref>), and old populations on islands are much more likely to be
+recognized as taxonomically distinct than young populations (Price et al. 2010). <xref rid="bib2" ref-type="bibr">Avise (1999)</xref> provides various estimates of upper and lower
+bounds to the duration of speciation (the upper bound being set by the divergence time of
+sister species, see also <xref rid="bib37" ref-type="bibr">Rosindell et al. (2010)</xref>, and
+the lower bound being set by the divergence time of phylogroups). For birds and mammals, he
+reports values between 1 and 3 Myr. In fish and herpetofauna, the reported rates are similar
+to those of birds and mammals but could in reality be much larger due to slower mitochondrial
+DNA clocks. Examples of 5 Myr exist in salamanders. Only in exceptional cases, for example,
+polyploidy in plants, can speciation occur instantaneously. Most detailed genetic models of
+speciation also predict that speciation takes time (<xref rid="bib8" ref-type="bibr">Gavrilets
+2004</xref>). Here, in order to preserve generality, we deliberately do not assume a
+specific mechanism for speciation but only recognize the simple fact that it is gradual rather
+than instantaneous. This form of speciation, termed “protracted speciation” by <xref rid="bib37" ref-type="bibr">Rosindell et al. (2010)</xref>, thus implicitly captures the
+outcome of what in reality are complex, ecological, and genetic processes, which given enough
+time lead to the birth of a new species (<xref rid="bib39" ref-type="bibr">Schluter
+2009</xref>).</p><p>Protracted speciation has been shown to resolve problems with the predictions of the neutral
+theory of biodiversity on speciation rate and species longevities (<xref rid="bib11" ref-type="bibr">Hubbell 2001</xref>; <xref rid="bib37" ref-type="bibr">Rosindell et al.
+2010</xref>). Here, we show how it explains the slowdown in LTT plots, in general, and when
+applied to four bird phylogenies. Moreover, we show that it can predict more imbalanced
+phylogenies than the standard birth–death model. We first study the pure birth model (i.e., no
+extinctions) with protracted speciation because it allows analytical treatment, which
+elegantly proves our point mathematically. We then explore the birth–death model with
+protracted speciation by simulation.</p><sec><title>R<sc>ESULTS</sc></title><sec><title>Model Predictions</title><sec><title>Pure birth model</title><p>We start with the pure birth model or <xref rid="bib41" ref-type="bibr">Yule
+(1924)</xref> model of diversification. We denote the number of species with
+<italic toggle="yes">N</italic><sub>g</sub> where the subscript g will become clear later. At a
+constant rate <italic toggle="yes">λ</italic><sub>1</sub>, species produce new species. There is no
+extinction in this model. <xref ref-type="fig" rid="fig1">Figure 1A</xref> shows the
+pure birth process. The probability that at time <italic toggle="yes">t</italic> there are
+<italic toggle="yes">N</italic><sub>g</sub> species is given by the following master
+equation:<disp-formula id="fd1a"><label>(1a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx1_ht.jpg"/></disp-formula>with initial
+condition<disp-formula id="fd1b"><label>(1b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx2_ht.jpg"/></disp-formula>This
+equation can be completely solved analytically, but here, we are only interested in the
+expected number of species at time <italic toggle="yes">t</italic> which obeys the ODE<disp-formula id="fd2a"><label>(2a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx3_ht.jpg"/></disp-formula>with initial condition<disp-formula id="fd2b"><label>(2b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx4_ht.jpg"/></disp-formula>The solution is straightforward:<disp-formula id="fd3"><label>(3)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx5_ht.jpg"/></disp-formula>Because all species survive (no extinction), the
+expected number of ancestral lineages in the phylogeny, <italic toggle="yes">L</italic>, at time
+<italic toggle="yes">t</italic> for the good species that are extant the present time
+<italic toggle="yes">T</italic> is simply given by<disp-formula id="fd4"><label>(4)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx6_ht.jpg"/></disp-formula>The present time <italic toggle="yes">T</italic> is
+irrelevant for this model but will be relevant for the protracted form of this model.
+From <xref ref-type="disp-formula" rid="fd4">Equation (4)</xref>, we see that the
+logarithm of the number of lineages increases linearly with time
+<italic toggle="yes">t</italic>:<disp-formula id="fd5"><label>(5)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx7_ht.jpg"/></disp-formula></p><fig id="fig1" orientation="portrait" position="float"><label>F<sc>igure</sc> 1.</label><caption><p>The pure birth model a) with and b) without protracted speciation. Dotted lines
+indicate an incipient species and solid lines are good species. c) Phylogeny of the
+protracted pure birth process of panel b: only those lineages that have completed
+speciation before the present will show up in the phylogeny. Note that the branching
+points are at the times that the incipient species are produced, not at the times
+that they become good species.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="sysbiosyr091f01_lw.jpg"/></fig></sec></sec></sec><sec><title>P<sc>ROTRACTED</sc> P<sc>URE</sc> B<sc>IRTH</sc> M<sc>ODEL</sc></title><p>Now we make speciation a protracted process. That is, each extant species still produces
+new species at a rate <italic toggle="yes">λ</italic><sub>1</sub>, but these new species are not yet good
+species. Instead, they are incipient species which become good species at a rate
+<italic toggle="yes">λ</italic><sub>2</sub>. This means that the time needed to complete speciation is
+exponentially distributed with parameter <italic toggle="yes">λ</italic><sub>2</sub>, so the mean time it
+will take to complete speciation is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="n1" overflow="scroll"><mml:mfrac><mml:mn>1</mml:mn><mml:msub><mml:mi>λ</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mfrac></mml:math></inline-formula>.
+Note that this protracted speciation model differs slightly from that analyzed by <xref rid="bib37" ref-type="bibr">Rosindell et al. (2010)</xref> who assumed a fixed time to
+complete speciation. If anything, a stochastically varying time to complete speciation seems
+more realistic. Incipient species give rise to new incipient species at rate
+<italic toggle="yes">λ</italic><sub>3</sub> while they are incipient. <xref ref-type="fig" rid="fig1">Figure 1B</xref> shows this protracted pure birth process. Again, we can write down a
+master equation, but now for the probability
+<italic toggle="yes">ℙ</italic>[<italic toggle="yes">N</italic><sub>g</sub>,<italic toggle="yes">N</italic><sub>i</sub>;<italic toggle="yes">t</italic>]
+that at time <italic toggle="yes">t</italic> there are <italic toggle="yes">N</italic><sub>g</sub> good (hence the
+subscript g) species and <italic toggle="yes">N</italic><sub>i</sub> incipient species:<disp-formula id="fd6a"><label>(6a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx8_ht.jpg"/></disp-formula>with initial condition<disp-formula id="fd6b"><label>(6b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx9_ht.jpg"/></disp-formula>This model cannot be solved analytically for
+<italic toggle="yes">ℙ</italic>[<italic toggle="yes">N</italic><sub>g</sub>,<italic toggle="yes">N</italic><sub>i</sub>;<italic toggle="yes">t</italic>],
+but we can write down expressions for the expected number of good and incipient species at
+time <italic toggle="yes">t</italic> (see <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>)
+:<disp-formula id="fd7a"><label>(7a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx10_ht.jpg"/></disp-formula><disp-formula id="fd7b"><label>(7b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx11_ht.jpg"/></disp-formula>with initial condition<disp-formula id="fd7c"><label>(7c)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx12_ht.jpg"/></disp-formula><disp-formula id="fd7d"><label>(7d)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx13_ht.jpg"/></disp-formula>This can be solved in general (see <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>), but here, we look
+at the special case where incipient species gives rise to new incipient species at the same
+rate as good species do (<italic toggle="yes">λ</italic><sub>3</sub> = <italic toggle="yes">λ</italic><sub>1</sub>) in
+which case, we have (see <xref ref-type="supplementary-material" rid="sup1">Supplementary
+Data</xref>):<disp-formula id="fd8a"><label>(8a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx14_ht.jpg"/></disp-formula><disp-formula id="fd8b"><label>(8b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx15_ht.jpg"/></disp-formula>The expected number of ancestral lineages
+<italic toggle="yes">L</italic> at time <italic toggle="yes">t</italic> for the good species extant at time
+<italic toggle="yes">T</italic> is the sum of the expected number of good species and the expected
+number of incipient species which have at least one good descendant species before time
+<italic toggle="yes">T</italic>:<disp-formula id="fd9"><label>(9)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx16_ht.jpg"/></disp-formula>where
+<italic toggle="yes">P</italic><sub>0</sub>(<italic toggle="yes">T</italic> − <italic toggle="yes">t</italic>) is the probability
+that none of the descendants becomes a good species. <xref ref-type="fig" rid="fig1">Figure
+1C</xref> illustrates that not all incipient species contribute to <italic toggle="yes">L</italic>
+because not all incipient species leave good descendant species before <italic toggle="yes">T</italic>.
+In online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>, we derive an analytical expression for
+<italic toggle="yes">P</italic><sub>0</sub>(<italic toggle="yes">t</italic>):<disp-formula id="fd10"><label>(10)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx17_ht.jpg"/></disp-formula>Inserting this expression and <xref ref-type="disp-formula" rid="fd8a">Equation (8)</xref> in <xref ref-type="disp-formula" rid="fd9">Equation (9)</xref> yields<disp-formula id="fd11"><label>(11)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx18_ht.jpg"/></disp-formula>We observe that the number of lineages increases
+less with <italic toggle="yes">t</italic> than in the pure birth model without protracted speciation
+(<italic toggle="yes">λ</italic><sub>2</sub> = <italic toggle="yes">∞</italic>), because the second term on the
+right hand side increases with <italic toggle="yes">t</italic> so the closer to the present, the more
+<italic toggle="yes">𝔼</italic>[<italic toggle="yes">L</italic>;<italic toggle="yes">t</italic>,<italic toggle="yes">T</italic>] will differ
+from the pure birth model. <xref ref-type="fig" rid="fig2">Figure 2</xref> illustrates how
+the slowdown in increase of the number of lineages depends on the parameter
+<italic toggle="yes">λ</italic><sub>2</sub>.</p><fig id="fig2" orientation="portrait" position="float"><label>F<sc>igure</sc> 2.</label><caption><p>Expected LTT plot for the protracted pure birth model (i.e., no extinction) for various
+values of the speciation completion rate <italic toggle="yes">λ</italic><sub>2</sub>. The value of
+the speciation initiation rate <italic toggle="yes">λ</italic><sub>1</sub> is 0.5. The curve for
+<italic toggle="yes">λ</italic><sub>2</sub> = <italic toggle="yes">∞</italic> is barely visible, as it almost
+coincides with the curve for <italic toggle="yes">λ</italic><sub>2</sub> = 10.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="sysbiosyr091f02_3c.jpg"/></fig><p>The formulas above assume that we start with <italic toggle="yes">N</italic><sub>g</sub>(0) good
+species, but in practice, we look at a phylogeny starting with two lineages at crown age at
+which point at least one of the two lineages is incipient (because it originates from the
+other at this point). In online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>, we derive
+analogous expressions for this initial condition.</p></sec><sec><title>B<sc>IRTH–</sc>D<sc>EATH</sc> M<sc>ODEL</sc></title><p>Starting from the pure birth model, but allowing for extinctions, one obtains the
+well-known birth–death model (<xref rid="bib13" ref-type="bibr">Kendall 1948</xref>) for
+which the master equation reads:<disp-formula id="fd12a"><label>(12a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx19_ht.jpg"/></disp-formula>where
+<italic toggle="yes">μ</italic><sub>1</sub> is the extinction rate and the initial conditions are given
+by <xref ref-type="disp-formula" rid="fd1b">Equation (1b)</xref>. See <xref ref-type="fig" rid="fig3">Figure 3</xref>, panels A and B, for an illustration of the birth–death
+process. The solution for this model can be obtained analytically with the method of
+characteristics. Here, we are interested in the expected number of species at time
+<italic toggle="yes">t</italic>, which is given by<disp-formula id="fd12b"><label>(12b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx20_ht.jpg"/></disp-formula>To compute the number of ancestral lineages
+<italic toggle="yes">L</italic> at time <italic toggle="yes">t</italic> of the species extant at time
+<italic toggle="yes">T</italic>, we first need the probability,
+<italic toggle="yes">ℙ</italic><sub><italic toggle="yes">t</italic><sub>1</sub>,<italic toggle="yes">t</italic><sub>2</sub></sub>,
+that there are surviving lineages at time <italic toggle="yes">t</italic><sub>2</sub> for a process
+starting at <italic toggle="yes">t</italic><sub>1</sub> with a single individual. This probability is
+given by (<xref rid="bib13" ref-type="bibr">Kendall 1948</xref>; <xref rid="bib18" ref-type="bibr">Nee et al. 1994a</xref>)<disp-formula id="fd13"><label>(13)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx21_ht.jpg"/></disp-formula>assuming that <italic toggle="yes">λ</italic><sub>1</sub> =
+/<italic toggle="yes">μ</italic><sub>1</sub>. The number of ancestral lineages at time
+<italic toggle="yes">t</italic> conditional on survival of the clade until the present time
+<italic toggle="yes">T</italic> is given by (<xref rid="bib18" ref-type="bibr">Nee et al. 1994a</xref>,
+see also online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>)<disp-formula id="fd14"><label>(14)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx22_ht.jpg"/></disp-formula>This expression is valid for the expected number of
+lineages when starting with <italic toggle="yes">N</italic><sub>g</sub>(0) species at the
+<italic toggle="yes">stem</italic> age <italic toggle="yes">t</italic> = 0. In practice, we usually have data on
+<italic toggle="yes">crown</italic> age, the branching point of the first two ancestral lineages. To
+produce the model's expectations for a phylogeny with a prescribed crown age, we must
+require that both ancestral lineages survive because if only one survives, there may still
+be a phylogeny, but it does not have the prescribed crown age. Mathematically, starting with
+two lineages at the crown age <italic toggle="yes">t</italic> = 0 implies that we can simply take twice
+<xref ref-type="disp-formula" rid="fd14">Equation (14)</xref> with
+<italic toggle="yes">N</italic><sub>g</sub>(0) = 1:<disp-formula id="fd15"><label>(15)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx23_ht.jpg"/></disp-formula>Regardless of whether we use the stem age–based
+<xref ref-type="disp-formula" rid="fd14">Equation (14)</xref> or crown-age based <xref ref-type="disp-formula" rid="fd15">Equation (15)</xref>, the logarithm of the number of
+lineages increases more than linearly with time:<disp-formula id="fd16"><label>(16)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx24_ht.jpg"/></disp-formula>where we ignored all terms that do not depend on
+<italic toggle="yes">t</italic> because
+<italic toggle="yes">ℙ</italic><sub><italic toggle="yes">t</italic>,<italic toggle="yes">T</italic></sub> increases more than
+linearly with <italic toggle="yes">t</italic>. This means that the model predicts an upturn in number of
+lineages near the present. This phenomenon is called the pull of the present (<xref rid="bib19" ref-type="bibr">Nee et al. 1994b</xref>) and can be seen in <xref ref-type="fig" rid="fig4">Figure 4</xref>. The verbal explanation is that recently arisen
+species have not had the time to become extinct causing an apparent acceleration of
+diversification near the present.</p><fig id="fig3" orientation="portrait" position="float"><label>F<sc>IGURE</sc> 3.</label><caption><p>The birth–death model with and without protracted speciation. a) A birth–death process
+that is extinct before the present time <italic toggle="yes">T</italic>, an eventuality that most
+analyses are conditioned against. b) A birth–death process that survives up to the
+present time <italic toggle="yes">T</italic>. c) The birth–death process of b where speciation is
+protracted. Dotted lines indicate an incipient species and solid lines are good species.
+d) Phylogeny of the protracted birth–death process of panel c. Only those lineages that
+have completed speciation or incipient lineages whose parent species has gone extinct
+before the present will show up in the phylogeny.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="sysbiosyr091f03_ht.jpg"/></fig><fig id="fig4" orientation="portrait" position="float"><label>F<sc>IGURE</sc> 4.</label><caption><p>Expected LTT plots for the protracted birth–death model for various values of the
+extinction rate <italic toggle="yes">μ</italic><sub>1</sub> = <italic toggle="yes">μ</italic><sub>2</sub> (upper
+panels) and the corresponding histograms of the slowdown statistic <italic toggle="yes">r</italic>
+(bottom panels). The lines are for different speciation completion rates
+<italic toggle="yes">λ</italic><sub>2</sub>. The value of the speciation initiation rate
+<italic toggle="yes">λ</italic><sub>1</sub> is set at 0.5. The curve for
+<italic toggle="yes">λ</italic><sub>2</sub> = <italic toggle="yes">∞</italic> is barely visible, as it almost
+coincides with the curve for <italic toggle="yes">λ</italic><sub>2</sub> = 10.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="sysbiosyr091f04_3c.jpg"/></fig></sec><sec><title>P<sc>ROTRACTED</sc> B<sc>IRTH–</sc>D<sc>EATH</sc> M<sc>ODEL</sc></title><p>Making speciation protracted changes the master equation to<disp-formula id="fd17"><label>(17)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx25_ht.jpg"/></disp-formula>See <xref ref-type="fig" rid="fig3">Figure 3C</xref>
+for an illustration of the process. As in the protracted pure birth model, the master
+equation cannot be solved analytically. Nevertheless, it is again possible to obtain
+analytical expressions for the expected number of good and incipient species at time
+<italic toggle="yes">t</italic>. We will not write out these expressions and their solutions explicitly
+because they are cumbersome to write, and, more importantly, they cannot easily be used to
+obtain an expression for
+<italic toggle="yes">𝔼</italic>[<italic toggle="yes">L</italic>;<italic toggle="yes">t</italic>,<italic toggle="yes">T</italic>]. First of
+all, conditioning on survival to the present, as in <xref ref-type="disp-formula" rid="fd14">Equation (14)</xref>, is no longer trivial because this requires (a function of)
+<italic toggle="yes">ℙ</italic>[<italic toggle="yes">N</italic><sub>g</sub>,<italic toggle="yes">N</italic><sub>i</sub>;<italic toggle="yes">t</italic>]
+for which an analytical solution is lacking. Furthermore, the addition of the expectations
+of <italic toggle="yes">N</italic><sub>g</sub> and <italic toggle="yes">N</italic><sub>i</sub> with a correction for
+the latter, as in <xref ref-type="disp-formula" rid="fd9">Equation (9)</xref>, no longer
+holds, because of the complicating factor that even if an incipient species has not become a
+good species by time <italic toggle="yes">T</italic>, it will be counted as a good species if its
+immediate ancestor was good but has become extinct (it simply replaces this extinct
+ancestor, because as long as it has not completed speciation, it will be considered
+identical to the ancestor species). <xref ref-type="fig" rid="fig3">Figure 3D</xref>
+explains this.</p><p>Because further analytical treatment seems extremely challenging, we simulated the process
+in order to gain insight in the behavior of the protracted birth–death model. Simulations
+also have the advantage that we can produce the (expected) number of lineages through time
+starting from the crown age, rather than the stem age, which require that conditioning
+should be done on the survival to the present of at least two lineages.</p><p>The simulation procedure of the protracted birth–death model is straightforward: We used
+the <xref rid="bib9" ref-type="bibr">Gillespie (1976)</xref> algorithm to simulate the
+master <xref ref-type="disp-formula" rid="fd17">Equation (17)</xref>. We started with one
+good species and one incipient species because we wanted to look at the results for crown
+age. Alternatively, one could start with two incipient species, but this does not affect the
+results qualitatively. For every newly arisen incipient species, we recorded, during the
+simulation, the exact time when it arose (time of birth), from which species it arose
+(parent species), when it completes speciation (time of maturation), and when it becomes
+extinct (time of death), noting that speciation completion and extinction need not occur. At
+the end of the simulation (at <italic toggle="yes">T</italic> = 15 Myr in our simulations), we
+constructed the phylogeny from this information to check whether the phylogeny had the
+initial good and incipient species as common ancestors (the common ancestors could be
+younger which must be ruled out because all iterations of the simulation must have the same
+crown age so that they can be averaged). If not, the phylogeny was ignored and the whole
+procedure was repeated.</p><p>Constructing this phylogeny is less straightforward than running the simulation. To obtain
+the phylogeny, we counted all extant species regarded as good species at the last event in
+the simulation (time <italic toggle="yes">t</italic>). Of course, good species qualify to be regarded as
+good, but there is a special case where an incipient species must also be regarded as good:
+when it arose from a good species that has since become extinct (<xref ref-type="fig" rid="fig3">Fig. 3C</xref>). However, when several incipient species all arose from a now
+extinct good species, only one should be counted as a good species; here, we adopted the
+convention of always choosing the youngest orphaned incipient species. To find the branching
+times of the phylogeny, the lineages considered good at time <italic toggle="yes">t</italic> were
+followed backwards in time until the birth event of one of these lineages (as an incipient
+species) was encountered. We define the age of a species as the time that passes between
+birth and death (extinction), not the time between maturation and death (extinction). This
+definition most closely matches the way real phylogenies are constructed. We continued the
+backwards search for birth events until one lineage remained at the crown age: The point
+just before the birth event of the second still extant lineage. In all our simulations, we
+assumed that incipient species produce new incipient species at the same rate as good
+species do (<italic toggle="yes">λ</italic><sub>3</sub> = <italic toggle="yes">λ</italic><sub>1</sub>), but our code
+allows for different values for these rates (<italic toggle="yes">λ</italic><sub>3</sub> =
+/<italic toggle="yes">λ</italic><sub>1</sub>). Online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref> contains a
+pseudo-code for the simulations which explains the construction of the phylogeny in more
+detail. A Matlab code is available upon request from the corresponding author.</p><p>
+<xref ref-type="fig" rid="fig4">Figure 4</xref> shows the LTT plots for various extinction
+rates (where extinction rates of incipient and good species are identical). Furthermore, it
+shows histograms of the slowdown statistic Δ<italic toggle="yes">r</italic> which is calculated as (<xref rid="bib25" ref-type="bibr">Pigot et al. 2010</xref>)<disp-formula id="fd18"><label>(18)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx26_ht.jpg"/></disp-formula>This is a better statistic than the often-used
+<italic toggle="yes">γ</italic>-statistic which depends on the size of the tree. It is clear that, as
+in the protracted pure birth model, making speciation protracted (lower values of
+<italic toggle="yes">λ</italic><sub>2</sub>) causes a slowdown in the increase of the number of
+lineages through time. Remarkably, not only does the mean of the measure of slowdown
+Δ<italic toggle="yes">r</italic> shift to the left but also the variance of Δ<italic toggle="yes">r</italic> becomes
+larger for smaller values of <italic toggle="yes">λ</italic><sub>2</sub> (longer mean time to complete
+speciation).</p><p>In <xref ref-type="fig" rid="fig4">Figure 4</xref>, the extinction rates of incipient and
+good species are set equal. This may not be realistic (see Discussion section). <xref ref-type="fig" rid="fig5">Figure 5</xref> shows the effect of different extinction rates
+for incipient and good species. When the incipient species extinction rate is high,
+protracted speciation no longer causes a slowdown in the LTT plot. The reason is simple:
+When incipient species are highly likely to go extinct, incipient species that manage to
+become good species will necessarily have to do so quickly, that is, they should take a
+short time to complete speciation. The situation is then similar to the birth–death process
+without protracted speciation, with the corresponding pull of the present.</p><fig id="fig5" orientation="portrait" position="float"><label>F<sc>IGURE</sc> 5.</label><caption><p>Expected LTT plots for the protracted birth–death model for various values of the
+incipient species extinction rate <italic toggle="yes">μ</italic><sub>2</sub>, where the extinction
+rate of good species is set at <italic toggle="yes">μ</italic><sub>1</sub> = 0.4. The lines are for
+different speciation completion rates <italic toggle="yes">λ</italic><sub>2</sub>. The value of the
+speciation initiation rate <italic toggle="yes">λ</italic><sub>1</sub> is set at 0.5.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="sysbiosyr091f05_3c.jpg"/></fig></sec><sec><title>S<sc>PECIATION</sc> C<sc>OMPLETION</sc> T<sc>IME AND</sc> D<sc>URATION OF</sc>
+S<sc>PECIATION</sc></title><p>The parameter <italic toggle="yes">λ</italic><sub>2</sub> measures the rate of incipient species
+completing speciation, and therefore, its inverse, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="n2" overflow="scroll"><mml:mfrac><mml:mn>1</mml:mn><mml:msub><mml:mi>λ</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mfrac></mml:math></inline-formula>,
+measures the time to complete speciation. However, this is not the same as the duration of
+speciation that is measured from speciation events that have actually occurred because some
+incipient species may never become good species because they go extinct (at rate
+<italic toggle="yes">μ</italic><sub>2</sub> in our model) and because each incipient species may
+produce incipient species itself (at rate <italic toggle="yes">λ</italic><sub>3</sub> in our model) that
+complete speciation before their parent does. One can derive an expression for the mean
+duration of speciation <italic toggle="yes">τ</italic> in terms of the model parameters (see online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>):<disp-formula id="fd19"><label>(19)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx27_ht.jpg"/></disp-formula>where<disp-formula id="fd20"><label>(20)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx28_ht.jpg"/></disp-formula>If
+<italic toggle="yes">λ</italic><sub>3</sub> = 0, this expression simplifies to (see online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>)<disp-formula id="fd21a"><label>(21a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx29_ht.jpg"/></disp-formula>and for
+<italic toggle="yes">μ</italic><sub>2</sub> = 0, we have<disp-formula id="fd21b"><label>(21b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx30_ht.jpg"/></disp-formula>Except for this last case, the distribution of the
+mean duration of speciation is no longer exponential and may have an interior mode (see
+online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>).</p></sec><sec><title>M<sc>ODEL</sc> F<sc>IT TO</sc> D<sc>ATA</sc></title><p>An exact expression for the likelihood of a phylogeny (and therefore an LTT) can be derived
+in the special case <italic toggle="yes">λ</italic><sub>3</sub> = <italic toggle="yes">λ</italic><sub>1</sub> and
+<italic toggle="yes">μ</italic><sub>1</sub> = <italic toggle="yes">μ</italic><sub>2</sub> = 0 (see online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>):<disp-formula id="fd22"><label>(22)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx31_ht.jpg"/></disp-formula>where the
+<italic toggle="yes">x</italic><sub><italic toggle="yes">i</italic></sub> are the branching times and<disp-formula id="fd23a"><label>(23a)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx32_ht.jpg"/></disp-formula><disp-formula id="fd23b"><label>(23b)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx33_ht.jpg"/></disp-formula><xref ref-type="fig" rid="fig6">Figure 6</xref>
+shows the fit of the protracted birth model (in green) to four bird phylogenies
+(<italic toggle="yes">Acanthiza</italic>, <italic toggle="yes">Cracidae</italic>, <italic toggle="yes">Myiborus</italic>, and
+<italic toggle="yes">Toxostoma</italic>) using this likelihood. The phylogenies were selected from the
+bird phylogenies of <xref rid="bib24" ref-type="bibr">Phillimore and Price (2008)</xref>
+with the criteria that a slowdown must be clearly visible in the data and that there are no
+missing species. <xref ref-type="table" rid="tbl1">Table 1</xref> contains the parameter
+estimates.</p><table-wrap id="tbl1" orientation="portrait" position="float"><label>T<sc>ABLE</sc> 1.</label><caption><p>Parameter estimates of four bird phylogenies for the protracted birth model (pb, using
+likelihood) and the protracted birth–death model (pbd, using least squares)</p></caption><table frame="hsides" rules="groups"><thead><tr><td colspan="1" rowspan="1">Data set</td><td align="center" colspan="1" rowspan="1">Model</td><td align="center" colspan="1" rowspan="1">
+<italic toggle="yes">λ</italic>
+<sub>1</sub> = <italic toggle="yes">λ</italic><sub>3</sub> (Myr <sup>−1</sup>)</td><td align="center" colspan="1" rowspan="1">
+<italic toggle="yes">λ</italic>
+<sub>2</sub> (Myr <sup>−1</sup>)</td><td align="center" colspan="1" rowspan="1">
+<italic toggle="yes">μ</italic>
+<sub>1</sub> = <italic toggle="yes">μ</italic><sub>2</sub> (Myr <sup>−1</sup>)</td><td align="center" colspan="1" rowspan="1">GOF</td><td align="center" colspan="1" rowspan="1">
+<italic toggle="yes">τ</italic> (Myr )</td></tr></thead><tbody><tr><td colspan="1" rowspan="1">
+<italic toggle="yes">Acanthiza</italic>
+</td><td colspan="1" rowspan="1">pb</td><td align="char" char="." colspan="1" rowspan="1">0.47</td><td align="char" char="." colspan="1" rowspan="1">0.04</td><td align="char" char="." colspan="1" rowspan="1">0</td><td align="char" char="." colspan="1" rowspan="1">– 7.89</td><td align="char" char="." colspan="1" rowspan="1">5.16</td></tr><tr><td colspan="1" rowspan="1"/><td colspan="1" rowspan="1">pbd</td><td align="char" char="." colspan="1" rowspan="1">0.66</td><td align="char" char="." colspan="1" rowspan="1">0.07</td><td align="char" char="." colspan="1" rowspan="1">0.3</td><td align="char" char="." colspan="1" rowspan="1">0.35</td><td align="char" char="." colspan="1" rowspan="1">3.81</td></tr><tr><td colspan="1" rowspan="1">
+<italic toggle="yes">Cracidae</italic>
+</td><td colspan="1" rowspan="1">pb</td><td align="char" char="." colspan="1" rowspan="1">0.96</td><td align="char" char="." colspan="1" rowspan="1">0.12</td><td align="char" char="." colspan="1" rowspan="1">0</td><td align="char" char="." colspan="1" rowspan="1">1.13</td><td align="char" char="." colspan="1" rowspan="1">2.31</td></tr><tr><td colspan="1" rowspan="1"/><td colspan="1" rowspan="1">pbd</td><td align="char" char="." colspan="1" rowspan="1">1.09</td><td align="char" char="." colspan="1" rowspan="1">0.16</td><td align="char" char="." colspan="1" rowspan="1">0.3</td><td align="char" char="." colspan="1" rowspan="1">0.47</td><td align="char" char="." colspan="1" rowspan="1">1.95</td></tr><tr><td colspan="1" rowspan="1">
+<italic toggle="yes">Myiborus</italic>
+</td><td colspan="1" rowspan="1">pb</td><td align="char" char="." colspan="1" rowspan="1">0.48</td><td align="char" char="." colspan="1" rowspan="1">0.89</td><td align="char" char="." colspan="1" rowspan="1">0</td><td align="char" char="." colspan="1" rowspan="1">– 2.71</td><td align="char" char="." colspan="1" rowspan="1">0.89</td></tr><tr><td colspan="1" rowspan="1"/><td colspan="1" rowspan="1">pbd</td><td align="char" char="." colspan="1" rowspan="1">0.81</td><td align="char" char="." colspan="1" rowspan="1">0.39</td><td align="char" char="." colspan="1" rowspan="1">0.3</td><td align="char" char="." colspan="1" rowspan="1">0.41</td><td align="char" char="." colspan="1" rowspan="1">1.29</td></tr><tr><td colspan="1" rowspan="1">
+<italic toggle="yes">Toxostoma</italic>
+</td><td colspan="1" rowspan="1">pb</td><td align="char" char="." colspan="1" rowspan="1">0.43</td><td align="char" char="." colspan="1" rowspan="1">0.05</td><td align="char" char="." colspan="1" rowspan="1">0</td><td align="char" char="." colspan="1" rowspan="1">– 8.34</td><td align="char" char="." colspan="1" rowspan="1">5.19</td></tr><tr><td colspan="1" rowspan="1"/><td colspan="1" rowspan="1">pbd</td><td align="char" char="." colspan="1" rowspan="1">0.65</td><td align="char" char="." colspan="1" rowspan="1">0.06</td><td align="char" char="." colspan="1" rowspan="1">0.3</td><td align="char" char="." colspan="1" rowspan="1">0.24</td><td align="char" char="." colspan="1" rowspan="1">3.98</td></tr></tbody></table><table-wrap-foot><fn id="tblfn1"><p>Because the extinction rate cannot be estimated reliably (the goodness of fit [GOF]
+did not change over a wide range of extinction values), the reported value of 0.3 was
+set beforehand. Also shown are the corresponding values of the GOF statistic, i.e.
+maximum likelihood and least-ssquared distance, and the estimated average duration of
+speciation (<italic toggle="yes">τ</italic>).</p></fn></table-wrap-foot></table-wrap><fig id="fig6" orientation="portrait" position="float"><label>F<sc>IGURE</sc> 6.</label><caption><p>LTT plots (stars) of four bird phylogenies, selected from <xref rid="bib24" ref-type="bibr">Phillimore &amp; Price (2008)</xref> (see text for selection criteria) and
+the fits of the protracted birth model (gray) and the protracted birth–death model
+(black). The former is obtained through maximum likelihood, the latter by least squares
+(see text). We assumed that <italic toggle="yes">μ</italic><sub>2</sub> =
+<italic toggle="yes">μ</italic><sub>1</sub> and <italic toggle="yes">λ</italic><sub>3</sub> =
+<italic toggle="yes">λ</italic><sub>1</sub>, so the fitted parameters are
+<italic toggle="yes">λ</italic><sub>1</sub>, <italic toggle="yes">λ</italic><sub>2</sub>, and
+<italic toggle="yes">μ</italic><sub>1</sub>.</p></caption><graphic xmlns:xlink="http://www.w3.org/1999/xlink" position="float" orientation="portrait" xlink:href="sysbiosyr091f06_ht.jpg"/></fig><p>We have not yet been able to find an expression for the likelihood for the protracted model
+with extinction because of difficulties defining good species (incipient species with
+extinct good parents must be considered good). Therefore, we employed a different fitting
+method to fit the model to four bird phylogenies. The fitting method is a least-squares fit
+of the full LTT plot: Using a simplex optimization algorithm, we searched for the parameters
+that minimize the distance between the observed LTT plot and the expected LTT plot, where
+the latter was obtained by simulation (10,000 iterations with a different seed for each
+iteration and the seeds fixed during the optimization to minimize noise). We found that we
+could not estimate the parameters reliably because the fit did not show an observable change
+across a wide range of extinction rates, but the speciation initiation and speciation
+completion rates did depend on the value of the extinction rate. <xref ref-type="fig" rid="fig6">Figure 6</xref> shows the fit for an extinction rate of 0.3 Myr<sup> − 1</sup>,
+whereas Table shows the corresponding parameter estimates of speciation initiation and
+speciation completion rates and the durations of speciation calculated from these rates with
+<xref ref-type="disp-formula" rid="fd19">Equation (19)</xref>. The durations of speciation
+are definitely in the right ball park, but because of the difficulty in accurately
+estimating the parameters, they should be interpreted with care.</p><p>It may seem that the fit of the protracted birth model, using maximum likelihood, is not as
+good as the fit of the protracted birth–death model, using least squares, but this is only
+apparent. Maximizing the likelihood finds the parameters that make the observed data set the
+mode of the probability distribution of phylogenies, whereas the least-squares approach
+finds the parameters that make it the mean. Expected LTT plot are, by definition, based on
+the mean.</p></sec><sec sec-type="discussion"><title>D<sc>ISCUSSION</sc></title><p>We have shown that protracted speciation, which only assumes that speciation takes time
+rather than occurs instantaneously, can explain the observed slowdown in LTT plots. The
+verbal argument is simple: Speciation events that initiated in the recent past may not have
+completed yet, so they do not count towards the total number of extant species at the
+present. Stated otherwise, to find branching points in the phylogenetic tree, one has to
+look back into the past at least as far as the time needed for speciation to complete, which
+is on average <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="n3" overflow="scroll"><mml:mfrac><mml:mn>1</mml:mn><mml:msub><mml:mi>λ</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mfrac></mml:math></inline-formula>.
+This causes many recent branching points to disappear, but deeper branching points will be
+counted as producing good lineages because they almost always leave enough time for
+speciation to complete.</p><p>Not all real phylogenies show a slowdown in diversification. This may be considered to be
+at odds with our results, but they are actually fully consistent with them. <xref ref-type="fig" rid="fig4">Figure 4</xref> shows the distribution of the slowdown statistic
+Δ<italic toggle="yes">r</italic> across 10,000 phylogenies simulated with the same parameter set.
+Whereas the bulk of the simulations show negative values of the slowdown statistic, some of
+them have slowdown parameters larger than 0. Also, the protractedness parameter
+<italic toggle="yes">λ</italic><sub>2</sub> need not be the same for all clades because the speciation
+process may be different across different clades.</p><p>In our model, we have assumed the simplest form of protracted speciation, where good
+species give rise to incipient species at a constant rate <italic toggle="yes">λ</italic><sub>1</sub> and
+incipient species complete their speciation at a constant rate
+<italic toggle="yes">λ</italic><sub>2</sub>. The latter means that the time to complete speciation is
+exponentially distributed. Naturally, speciation is a much more intricate process than these
+simple assumptions suggest. An incipient species may have to go through several stages
+before it is considered a good species, for example, if speciation requires an accumulation
+of mutations (<xref rid="bib8" ref-type="bibr">Gavrilets 2004</xref>). This can be modeled
+by assuming higher order incipient species <italic toggle="yes">N</italic><sub>i,<italic toggle="yes">j</italic></sub>
+(where <italic toggle="yes">j</italic> is the order) that transform into one another with constant rates
+<italic toggle="yes">λ</italic><sub>2,<italic toggle="yes">j</italic></sub>. We then look at the dynamics of
+<italic toggle="yes">ℙ</italic>[<italic toggle="yes">N</italic><sub>g</sub>,<italic toggle="yes">N</italic><sub>i,1</sub>,…,<italic toggle="yes">N</italic><sub>i,<italic toggle="yes">n</italic></sub>,<italic toggle="yes">t</italic>]
+when the highest order is <italic toggle="yes">n</italic>. The time spent in each of these incipient
+states is still exponentially distributed with parameter
+<italic toggle="yes">λ</italic><sub>2,<italic toggle="yes">j</italic></sub>, but the total time to complete
+speciation, which is the sum of the times spent in each incipient state, is no longer
+exponentially distributed. For example, when all rates are identical
+(<italic toggle="yes">λ</italic><sub>2,<italic toggle="yes">j</italic></sub> = <italic toggle="yes">λ</italic><sub>2</sub> for
+all <italic toggle="yes">j</italic> = 1,…,<italic toggle="yes">n</italic>), then the total time to complete speciation
+is gamma distributed (<xref rid="bib1" ref-type="bibr">Akkouchi 2008</xref>):<disp-formula id="fd24"><label>(24)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx34_ht.jpg"/></disp-formula>whereas for different parameters
+<italic toggle="yes">λ</italic><sub>2,<italic toggle="yes">j</italic></sub>, the probability distribution
+is<disp-formula id="fd25"><label>(25)</label><inline-graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="sysbiosyr091fx35_ht.jpg"/></disp-formula>These
+distributions, unlike the exponential distribution, are hump shaped with their mode at time
+larger than 0 and very flexible, so a wide variety of speciation modes could be
+incorporated. Such alternative distributions for the time for speciation to complete will
+have consequences for the quantitative shape of the LTT plot, but we expect that it will not
+change our results qualitatively: There will still be a slowdown of the increase of the
+number of lineages. For example, consider a model with <italic toggle="yes">n</italic> incipient states
+with identical rates <italic toggle="yes">n</italic><italic toggle="yes">λ</italic><sub>2</sub>. We expect the
+slowdown to be more pronounced because while the mean time to complete speciation is still
+<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="n4" overflow="scroll"><mml:mfrac><mml:mn>1</mml:mn><mml:msub><mml:mi>λ</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mfrac></mml:math></inline-formula>,
+the modal time to complete speciation, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="n5" overflow="scroll"><mml:mfrac><mml:mrow><mml:mi>n</mml:mi><mml:mo>−</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:msub><mml:mi>λ</mml:mi><mml:mn>2</mml:mn></mml:msub></mml:mrow></mml:mfrac></mml:math></inline-formula>,
+is larger than 0. Furthermore, note that for this model, the larger the number of incipient
+stages, the more peaked is the distribution of the speciation-completion time. In the limit
+of an infinite number of incipient stages, the speciation completion time becomes fixed.
+This is the case considered in <xref rid="bib37" ref-type="bibr">Rosindell et al.
+(2010)</xref> in the context of the neutral theory of biodiversity.</p><p>The parameter <italic toggle="yes">μ</italic><sub>2</sub> is the extinction rate of incipient species.
+It can be argued that incipient species are more likely to become extinct (and hence have
+higher <italic toggle="yes">μ</italic><sub>2</sub> values) because of smaller population size or because
+gene flow causes the incipient species to merge with its parent (<xref rid="bib15" ref-type="bibr">McPeek 2008</xref>). However, one could also argue that incipient species have
+a lower extinction rate because they are likely to fill a new niche in which there is less
+competition. In reality, both processes may play a role. A possible scenario is that
+initially the extinction rate is high, but this extinction rate decreases as time goes by.
+This can all be incorporated in the protracted speciation model with multiple incipient
+states. For example, in a model with two incipient states, the first state has a higher
+extinction rate than the second.</p><p>Not only can protracted speciation explain slowdown in LTT plots, it can also predict more
+imbalanced trees than the standard birth–death model, in line with observations (<xref rid="bib3" ref-type="bibr">Blum and Francois 2006</xref>; <xref rid="bib24" ref-type="bibr">Phillimore and Price 2008</xref>), if <italic toggle="yes">λ</italic><sub>3</sub> &lt;
+<italic toggle="yes">λ</italic><sub>1</sub> and <italic toggle="yes">λ</italic><sub>2</sub> is small ( &lt; 1). This
+is not due to protractedness per se but due to the fact that it takes longer for a newly
+arisen incipient species to speciate further than for a good species when
+<italic toggle="yes">λ</italic><sub>3</sub> &lt; <italic toggle="yes">λ</italic><sub>1</sub>. This induces a time
+lag which has been shown to change tree imbalance in simulations (<xref rid="bib14" ref-type="bibr">Losos and Adler 1995</xref>; <xref rid="bib36" ref-type="bibr">Rogers
+1996</xref>) and analytically (<xref rid="bib26" ref-type="bibr">Pinelis 2003</xref>). We
+show this result for <italic toggle="yes">λ</italic><sub>3</sub> = 0 in online <xref ref-type="supplementary-material" rid="sup1">Supplementary Data</xref>.</p><p>The protracted speciation model is a parsimonious explanation for the slowdown in
+diversification that has, to the best of our knowledge, gone unnoticed in the literature.
+Only <xref rid="bib40" ref-type="bibr">Weir and Schluter (2007)</xref> constructed a model
+which, in hindsight, can be interpreted as an early protracted speciation model, but it was
+not used to explain slowdowns in clade diversification. In fact, our model now allows for a
+rigorous reanalysis of their pioneering work, relating the latitudinal diversity gradient to
+a latitudinal trend in the duration of speciation. Our protracted speciation model bears
+some resemblance to the explanations in terms of diversity dependence as well as age
+dependence of nodes. Diversity dependence induces a nonconstant rate of speciation, and,
+likewise, protracted speciation induces nonconstant rate of speciation where the speciation
+rate decreases near the present day to discount any speciation events that have started, but
+not yet completed. The main difference between our model and the diversity-dependence model
+is that in the latter, the speciation rate depends on the number of extant species which
+naturally increases with time. Diversity dependence means that the species are no longer
+independent from one another, and hence, the analytical treatment of the diversity-dependent
+birth–death model is challenging; recent work in the field (<xref rid="bib31" ref-type="bibr">Rabosky and Lovette 2008</xref>) has been criticized for making unrealistic
+assumptions for the sake of tractability (<xref rid="bib5" ref-type="bibr">Bokma
+2009</xref>). Analytical treatment of the protracted speciation model interpreted as a
+time-dependent birth–death model is also not trivial because the distribution of speciation
+completion times cannot be simply translated into a time-dependent speciation rate, but
+perhaps, this interpretation provides good approximations and the idea merits further study.
+The second explanation, of age dependence of nodes (<xref rid="bib28" ref-type="bibr">Purvis
+et al. 2009</xref>), is actually an emergent property of protracted speciation. Missing
+species are not interpreted as sampling effects but as unfinished speciation processes. In
+fact, all explanations for the slowdown in diversification must involve a mechanism for
+lowering the speciation rate at times near the present. That diversification rates vary in
+time is generally accepted (<xref rid="bib4" ref-type="bibr">Bokma 2003</xref>), but the
+question is why they should mostly be decreasing right now. The answer is inherent in the
+explanations in terms of sampling effects and protracted speciation, but it is a separate
+assumption in the explanation in terms of diversity dependence. Diversity dependence
+certainly plays a role, but it may be confined to specific cases, for example, <xref rid="bib31" ref-type="bibr">Rabosky and Lovette 2008</xref>, whereas protracted speciation
+seems a more general phenomenon. The only way to find out is to construct a model that
+contains both protracted speciation and diversity dependence and compare it to a model with
+just protracted speciation.</p><p>We used a least-squares approach to estimate model parameters in the protracted birth–death
+model because we have not yet been able to derive a full likelihood formula for this model
+when extinction is nonzero. Such a likelihood formula is useful for a statistically sound
+estimation of parameters from given phylogenies and comparison of the performance of
+different models (although maximum-likelihood–based estimated tend to be biased).
+Nevertheless, the simplicity of protracted speciation leaves us hopeful that such a
+likelihood formula will become available for our model or a variant that also contains the
+essence of protracted speciation. However, even if the likelihood can be computed, the
+estimates are unlikely to be very accurate because we expect the likelihood surface to be
+fairly flat across a wide range of extinction rates. This expectation is based on results
+with the least-squares approach where the least-squares distance between model and data
+showed no observable change across a wide range of extinction rates. Our inability to
+accurately estimate parameters will be even more pronounced in more realistic models with
+<italic toggle="yes">λ</italic><sub>1</sub> = /<italic toggle="yes">λ</italic><sub>3</sub> and
+<italic toggle="yes">μ</italic><sub>1</sub> = /<italic toggle="yes">μ</italic><sub>2</sub> or a more realistic
+distribution of speciation completion times because of the higher number of df.
+Consequently, the phylogeny alone might not allow accurate estimation of the key parameters
+and the relative contributions of protracted speciation and other mechanisms such as
+diversity dependence in explaining the slowdown. This may require development of methods
+employing additional data such as the fossil record (<xref rid="bib22" ref-type="bibr">Paradis 2003</xref>, <xref rid="bib23" ref-type="bibr">Paradis 2004</xref>; <xref rid="bib7" ref-type="bibr">Etienne and Apol 2009</xref>; <xref rid="bib28" ref-type="bibr">Purvis et al. 2009</xref>).</p><p>We have shown that the observed slowdowns in diversification can be explained with the
+simple assumption that speciation takes time. In no way do we exclude the possibility or
+importance of diversity-dependent diversification; rather, we regard protracted speciation
+as an alternative, possibly complementary parsimonious explanation that cannot be ignored in
+future models of diversification.</p></sec><sec><title>S<sc>UPPLEMENTARY</sc> M<sc>ATERIAL</sc></title><p>
+<xref ref-type="supplementary-material" rid="sup1">Supplementary material</xref>.</p></sec><sec><title>F<sc>UNDING</sc></title><p>This work was financially supported by the EPSRC (grant EP/F043112/1) and the Netherlands
+Organization for Scientifi c Research (NWO).</p></sec><sec sec-type="supplementary-material"><title>Supplementary Material</title><supplementary-material content-type="local-data" id="sup1" position="float" orientation="portrait"><label>Supplementary Data</label><media xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="syr091_supplementary_data.zip" position="float" orientation="portrait"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack><p>We are most grateful to Albert Phillimore and Bart Haegeman for very stimulating
+discussions and comments on the manuscript and the former for providing the bird
+phylogenies. J.R. thanks the EPSRC (grant EP/F043112/1) and R.S.E. thanks the Netherlands
+Organization for Scientific Research (NWO) for financial support.</p></ack><ref-list><title>References</title><ref id="bib1"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Akkouchi</surname><given-names>M</given-names></name></person-group><article-title>On the convolution of exponential distributions</article-title><source>J. Chungcheong Math. Soc.</source><year>2008</year><volume>21</volume><fpage>501</fpage><lpage>510</lpage></element-citation></ref><ref id="bib2"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Avise</surname><given-names>JC</given-names></name></person-group><article-title>Phylogeography: the history and formation of species</article-title><year>1999</year><publisher-loc>Cambridge (MA)</publisher-loc><publisher-name>Harvard University Press</publisher-name></element-citation></ref><ref id="bib3"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Blum</surname><given-names>MGB</given-names></name><name name-style="western"><surname>Francois</surname><given-names>O</given-names></name></person-group><article-title>Which random processes describe the tree of life? A large-scale study of
+phylogenetic tree imbalance</article-title><source>Sys. Biol.</source><year>2006</year><volume>55</volume><fpage>685</fpage><lpage>691</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1080/10635150600889625</pub-id><pub-id pub-id-type="pmid">16969944</pub-id></element-citation></ref><ref id="bib4"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Bokma</surname><given-names>F</given-names></name></person-group><article-title>Testing for equal rates of cladogenesis in diverse taxa</article-title><source>Evolution</source><year>2003</year><volume>57</volume><fpage>2469</fpage><lpage>2474</lpage><pub-id pub-id-type="pmid">14686524</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.0014-3820.2003.tb01492.x</pub-id></element-citation></ref><ref id="bib5"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Bokma</surname><given-names>F</given-names></name></person-group><article-title>Problems detecting density-dependent diversification on phylogenies. Proc.
+R. Soc. Lond</article-title><source>B</source><year>2009</year><volume>276</volume><fpage>993</fpage><lpage>994</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rspb.2008.1249</pub-id><pub-id pub-id-type="pmcid">PMC2679062</pub-id><pub-id pub-id-type="pmid">19129112</pub-id></element-citation></ref><ref id="bib6"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Coyne</surname><given-names>JA</given-names></name><name name-style="western"><surname>Orr</surname><given-names>HA</given-names></name></person-group><article-title>Speciation</article-title><year>2004</year><publisher-loc>Sunderland (MA)</publisher-loc><publisher-name>Sinauer</publisher-name></element-citation></ref><ref id="bib7"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Etienne</surname><given-names>RS</given-names></name><name name-style="western"><surname>Apol</surname><given-names>MEF</given-names></name></person-group><article-title>Estimating speciation and extinction rates from diversity data and the
+fossil record</article-title><source>Evolution</source><year>2009</year><volume>63</volume><fpage>244</fpage><lpage>255</lpage><pub-id pub-id-type="pmid">19055680</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1558-5646.2008.00537.x</pub-id></element-citation></ref><ref id="bib8"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Gavrilets</surname><given-names>S</given-names></name></person-group><article-title>Fitness landscapes and the origin of species</article-title><year>2004</year><publisher-loc>Princeton (NJ)</publisher-loc><publisher-name>Princeton University Press</publisher-name></element-citation></ref><ref id="bib9"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Gillespie</surname><given-names>DT</given-names></name></person-group><article-title>A general method for numerically simulating the stochastic time evolution
+of coupled chemical reactions</article-title><source>J. Comput. Phys.</source><year>1976</year><volume>22</volume><fpage>403</fpage><lpage>434</lpage></element-citation></ref><ref id="bib10"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Harvey</surname><given-names>PH</given-names></name><name name-style="western"><surname>May</surname><given-names>RM</given-names></name><name name-style="western"><surname>Nee</surname><given-names>S</given-names></name></person-group><article-title>Phylogenies without fossils</article-title><source>Evolution</source><year>1994</year><volume>48</volume><fpage>523</fpage><lpage>529</lpage><pub-id pub-id-type="pmid">28568267</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1558-5646.1994.tb01341.x</pub-id></element-citation></ref><ref id="bib11"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Hubbell</surname><given-names>SP</given-names></name></person-group><article-title>The Unified Neutral Theory of Biodiversity and Biogeography</article-title><year>2001</year><publisher-loc>Princeton (NJ)</publisher-loc><publisher-name>Princeton University Press</publisher-name></element-citation></ref><ref id="bib12"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Jablonski</surname><given-names>D</given-names></name><name name-style="western"><surname>Roy</surname><given-names>K</given-names></name><name name-style="western"><surname>Valentine</surname><given-names>JW</given-names></name><name name-style="western"><surname>Price</surname><given-names>RM</given-names></name><name name-style="western"><surname>Anderson</surname><given-names>PS</given-names></name></person-group><article-title>The impact of the pull of the recent on the history of marine
+diversity</article-title><source>Science</source><year>2003</year><volume>300</volume><fpage>1133</fpage><lpage>1135</lpage><pub-id pub-id-type="pmid">12750517</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1083246</pub-id></element-citation></ref><ref id="bib13"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Kendall</surname><given-names>DG</given-names></name></person-group><article-title>On some modes of population growth giving rise to R.A. Fisher's logarithmic
+series distribution</article-title><source>Biometrika</source><year>1948</year><volume>35</volume><fpage>6</fpage><lpage>15</lpage><pub-id pub-id-type="pmid">18867408</pub-id></element-citation></ref><ref id="bib14"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Losos</surname><given-names>J</given-names></name><name name-style="western"><surname>Adler</surname><given-names>FR</given-names></name></person-group><article-title>Stumped by trees? A generalized null model for patterns of organismal
+diversity</article-title><source>Am. Nat</source><year>1995</year><volume>145</volume><fpage>329</fpage><lpage>342</lpage></element-citation></ref><ref id="bib15"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>McPeek</surname><given-names>MA</given-names></name></person-group><article-title>The ecological dynamics of clade diversification and community
+assembly</article-title><source>Am. Nat</source><year>2008</year><volume>172</volume><fpage>E270</fpage><lpage>E284</lpage><pub-id pub-id-type="pmid">18851684</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1086/593137</pub-id></element-citation></ref><ref id="bib16"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Nee</surname><given-names>S</given-names></name></person-group><article-title>Inferring speciation rates from phylogenies</article-title><source>Evolution</source><year>2001</year><volume>55</volume><fpage>661</fpage><lpage>668</lpage><pub-id pub-id-type="pmid">11392383</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1554/0014-3820(2001)055[0661:isrfp]2.0.co;2</pub-id></element-citation></ref><ref id="bib17"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Nee</surname><given-names>S</given-names></name></person-group><article-title>Birth-death models in macroevolution. Annu. Rev. Ecol</article-title><source>Syst</source><year>2006</year><volume>37</volume><fpage>1</fpage><lpage>17</lpage></element-citation></ref><ref id="bib18"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Nee</surname><given-names>S</given-names></name><name name-style="western"><surname>Holmes</surname><given-names>EC</given-names></name><name name-style="western"><surname>May</surname><given-names>RM</given-names></name><name name-style="western"><surname>Harvey</surname><given-names>PH</given-names></name></person-group><article-title>Extinction rates can be estimated from molecular
+phylogenies</article-title><source>Philos. Trans. Biol. Sci.</source><year>1994</year><volume>344</volume><fpage>77</fpage><lpage>82</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rstb.1994.0054</pub-id><pub-id pub-id-type="pmid">8878259</pub-id></element-citation></ref><ref id="bib19"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Nee</surname><given-names>S</given-names></name><name name-style="western"><surname>May</surname><given-names>RM</given-names></name><name name-style="western"><surname>Harvey</surname><given-names>PH</given-names></name></person-group><article-title>The reconstructed evolutionary process. Philos. Trans. R. Soc.
+Lond</article-title><source>B.</source><year>1994</year><volume>344</volume><fpage>305</fpage><lpage>311</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rstb.1994.0068</pub-id><pub-id pub-id-type="pmid">7938201</pub-id></element-citation></ref><ref id="bib20"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Nee</surname><given-names>S</given-names></name><name name-style="western"><surname>Ø</surname><given-names>Mooers A</given-names></name><name name-style="western"><surname>Harvey</surname><given-names>PH</given-names></name></person-group><article-title>Tempo and mode of evolution revealed from molecular phylogenies. Proc.
+Natl. Acad. Sci. U</article-title><source>S. A</source><year>1992</year><volume>89</volume><fpage>8322</fpage><lpage>8326</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.89.17.8322</pub-id><pub-id pub-id-type="pmcid">PMC49910</pub-id><pub-id pub-id-type="pmid">1518865</pub-id></element-citation></ref><ref id="bib21"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Odling-Smee</surname><given-names>F</given-names></name><name name-style="western"><surname>Laland</surname><given-names>KN</given-names></name><name name-style="western"><surname>Feldman</surname><given-names>MW</given-names></name></person-group><article-title>Niche construction: the neglected process in evolution</article-title><year>2003</year><publisher-loc>Princeton (NJ)</publisher-loc><publisher-name>Princeton University Press</publisher-name></element-citation></ref><ref id="bib22"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Paradis</surname><given-names>E</given-names></name></person-group><article-title>Analysis of diversification: combining phylogenetic and taxonomic data.
+Proc. R. Soc. Lond</article-title><source>B.</source><year>2003</year><volume>270</volume><fpage>2499</fpage><lpage>2505</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rspb.2003.2513</pub-id><pub-id pub-id-type="pmcid">PMC1691533</pub-id><pub-id pub-id-type="pmid">14667342</pub-id></element-citation></ref><ref id="bib23"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Paradis</surname><given-names>E</given-names></name></person-group><article-title>Can extinction rates be estimated without fossils?</article-title><source>J. Theor. Biol.</source><year>2004</year><volume>229</volume><fpage>19</fpage><lpage>30</lpage><pub-id pub-id-type="pmid">15178182</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.jtbi.2004.02.018</pub-id></element-citation></ref><ref id="bib24"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Phillimore</surname><given-names>AB</given-names></name><name name-style="western"><surname>Price</surname><given-names>TD</given-names></name></person-group><article-title>Density-dependent cladogenesis in birds</article-title><source>PLoS Biol.</source><year>2008</year><volume>6</volume><fpage>0483</fpage><lpage>0489</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1371/journal.pbio.0060071</pub-id><pub-id pub-id-type="pmcid">PMC2270327</pub-id><pub-id pub-id-type="pmid">18366256</pub-id></element-citation></ref><ref id="bib25"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pigot</surname><given-names>A</given-names></name><name name-style="western"><surname>Phillimore</surname><given-names>AB</given-names></name><name name-style="western"><surname>Owens</surname><given-names>IPF</given-names></name><name name-style="western"><surname>Orme</surname><given-names>CDL</given-names></name></person-group><article-title>The shape and temporal dynamics of phylogenetic trees arising from
+geographic speciation</article-title><source>Syst. Biol.</source><year>2010</year><volume>59</volume><fpage>660</fpage><lpage>673</lpage><pub-id pub-id-type="pmid">20952757</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1093/sysbio/syq058</pub-id></element-citation></ref><ref id="bib26"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pinelis</surname><given-names>I</given-names></name></person-group><article-title>Evolutionary models of phylogenetic trees. Proc. R. Soc.
+Lond</article-title><source>B.</source><year>2003</year><volume>279</volume><fpage>1425</fpage><lpage>1431</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rspb.2003.2374</pub-id><pub-id pub-id-type="pmcid">PMC1691382</pub-id><pub-id pub-id-type="pmid">12965036</pub-id></element-citation></ref><ref id="bib27"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Price</surname><given-names>T</given-names></name><name name-style="western"><surname>Phillimore</surname><given-names>AB</given-names></name><name name-style="western"><surname>Awodey</surname><given-names>M</given-names></name><name name-style="western"><surname>Hudson</surname><given-names>R</given-names></name></person-group><person-group person-group-type="editor"><name name-style="western"><surname>Grant</surname><given-names>PR</given-names></name><name name-style="western"><surname>Grant</surname><given-names>BR</given-names></name></person-group><article-title>Ecological and geographical influences on the allopatric phase of island
+speciation. In press.</article-title><source>From field observations to mechanisms. A program in evolutionary biology</source><year>2010</year><publisher-loc>Princeton (NJ)</publisher-loc><publisher-name>Princeton University Press</publisher-name></element-citation></ref><ref id="bib28"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Purvis</surname><given-names>A</given-names></name><name name-style="western"><surname>Orme</surname><given-names>CDL</given-names></name><name name-style="western"><surname>Toomey</surname><given-names>NH</given-names></name><name name-style="western"><surname>Pearson</surname><given-names>PN</given-names></name></person-group><person-group person-group-type="editor"><name name-style="western"><surname>R.Butlin</surname><given-names>DSchluter</given-names></name><name name-style="western"><surname>J.Bridle</surname></name></person-group><article-title>Temporal patterns in diversification rates. Chapter 15, p.
+278–300</article-title><source>Speciation and patterns of diversity</source><year>2009</year><publisher-loc>Cambridge (UK)</publisher-loc><publisher-name>Cambridge University Press</publisher-name></element-citation></ref><ref id="bib29"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Pybus</surname><given-names>OG</given-names></name><name name-style="western"><surname>Harvey</surname><given-names>PH</given-names></name></person-group><article-title>Testing macro-evolutionary models using incomplete molecular phylogenies.
+Proc. R. Soc. Lond</article-title><source>B.</source><year>2000</year><volume>267</volume><fpage>2267</fpage><lpage>2272</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rspb.2000.1278</pub-id><pub-id pub-id-type="pmcid">PMC1690817</pub-id><pub-id pub-id-type="pmid">11413642</pub-id></element-citation></ref><ref id="bib30"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rabosky</surname><given-names>DL</given-names></name></person-group><article-title>Extinction rates should not be estimated from molecular
+phylogenies</article-title><source>Evolution</source><year>2010</year><volume>64</volume><fpage>1816</fpage><lpage>1824</lpage><pub-id pub-id-type="pmid">20030708</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1558-5646.2009.00926.x</pub-id></element-citation></ref><ref id="bib31"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rabosky</surname><given-names>DL</given-names></name><name name-style="western"><surname>Lovette</surname><given-names>IJ</given-names></name></person-group><article-title>Density-dependent diversification in North American wood warblers. Proc. R.
+Soc. Lond</article-title><source>B.</source><year>2008</year><volume>275</volume><fpage>2363</fpage><lpage>2371</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1098/rspb.2008.0630</pub-id><pub-id pub-id-type="pmcid">PMC2603228</pub-id><pub-id pub-id-type="pmid">18611849</pub-id></element-citation></ref><ref id="bib32"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Raup</surname><given-names>DM</given-names></name></person-group><article-title>Biases in the fossil record of species and genera. Bull. Carnegie Mus.
+Nat</article-title><source>Hist</source><year>1979</year><volume>13</volume><fpage>85</fpage><lpage>91</lpage></element-citation></ref><ref id="bib33"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Raup</surname><given-names>DM</given-names></name><name name-style="western"><surname>Gould</surname><given-names>SJ</given-names></name><name name-style="western"><surname>Schopf</surname><given-names>TJM</given-names></name><name name-style="western"><surname>Simberloff</surname><given-names>DS</given-names></name></person-group><article-title>Stochastic models of phylogeny and the evolution of
+diversity</article-title><source>J. Geol.</source><year>1973</year><volume>81</volume><fpage>525</fpage><lpage>542</lpage></element-citation></ref><ref id="bib34"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ricklefs</surname><given-names>RE</given-names></name></person-group><article-title>Estimating diversification rates from phylogenetic
+information</article-title><source>Trends Ecol. Evol.</source><year>2007</year><volume>22</volume><fpage>601</fpage><lpage>610</lpage><pub-id pub-id-type="pmid">17963995</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1016/j.tree.2007.06.013</pub-id></element-citation></ref><ref id="bib35"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Ricklefs</surname><given-names>RE</given-names></name></person-group><article-title>Evolutionary diversification, coevolution between populations and their
+antagonists, and the filling of niche space. Proc. Natl. Acad. Sci. U</article-title><source>S. A</source><year>2010</year><volume>107</volume><fpage>1265</fpage><lpage>1272</lpage><pub-id pub-id-type="doi" assigning-authority="pmc">10.1073/pnas.0913626107</pub-id><pub-id pub-id-type="pmcid">PMC2824412</pub-id><pub-id pub-id-type="pmid">20080597</pub-id></element-citation></ref><ref id="bib36"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rogers</surname><given-names>JS</given-names></name></person-group><article-title>Central moments and probability distributions of three measures of
+phylogenetic tree imbalance</article-title><source>Syst. Biol.</source><year>1996</year><volume>45</volume><fpage>99</fpage><lpage>110</lpage></element-citation></ref><ref id="bib37"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Rosindell</surname><given-names>J</given-names></name><name name-style="western"><surname>Cornell</surname><given-names>SJ</given-names></name><name name-style="western"><surname>Hubbell</surname><given-names>SP</given-names></name><name name-style="western"><surname>Etienne</surname><given-names>RS</given-names></name></person-group><article-title>Protracted speciation revitalizes the neutral theory of
+biodiversity</article-title><source>Ecol. Lett.</source><year>2010</year><volume>13</volume><fpage>716</fpage><lpage>727</lpage><pub-id pub-id-type="pmid">20584169</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1111/j.1461-0248.2010.01463.x</pub-id></element-citation></ref><ref id="bib38"><element-citation publication-type="book"><person-group person-group-type="author"><name name-style="western"><surname>Schluter</surname><given-names>D</given-names></name></person-group><source>The ecology of adaptive radiation.</source><year>2000</year><publisher-loc>New York</publisher-loc><publisher-name>Oxford University Press</publisher-name></element-citation></ref><ref id="bib39"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Schluter</surname><given-names>D</given-names></name></person-group><article-title>Evidence for ecological speciation and its alternative</article-title><source>Science</source><year>2009</year><volume>323</volume><fpage>737</fpage><lpage>741</lpage><pub-id pub-id-type="pmid">19197053</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1160006</pub-id></element-citation></ref><ref id="bib40"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Weir</surname><given-names>JT</given-names></name><name name-style="western"><surname>Schluter</surname><given-names>D</given-names></name></person-group><article-title>The latitudinal gradient in recent speciation and extinction rates of birds
+and mammals</article-title><source>Science</source><year>2007</year><volume>315</volume><fpage>1574</fpage><lpage>1576</lpage><pub-id pub-id-type="pmid">17363673</pub-id><pub-id pub-id-type="doi" assigning-authority="pmc">10.1126/science.1135590</pub-id></element-citation></ref><ref id="bib41"><element-citation publication-type="journal"><person-group person-group-type="author"><name name-style="western"><surname>Yule</surname><given-names>G</given-names></name></person-group><article-title>A mathematical theory of evolution based on the conclusions of Dr. J. C.
+Willis, FRS. Philos.</article-title><source>Trans. R. Soc. Lond</source><year>1924</year><comment>B 213:21–87</comment></element-citation></ref></ref-list></back></article></pmc-articleset>
