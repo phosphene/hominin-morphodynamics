@@ -129,3 +129,24 @@ Rigorous naming and clean three-phase composition enable **lossless skimming**:
 2. **Bottom Layer (How):** Internal helper functions within the pure transform module that detail *how* the numerical data is reshaped.
 
 A researcher inspecting a pipeline must be able to verify its entire macroevolutionary intent and invariant structure strictly by reading the top-level orchestration layer, without descending into solver internals.
+
+---
+
+## 9. Integration with Federated Knowledge Architecture (FKA) & Hickey Namespacing
+
+The Tellman semiotic model (Sign, Referent, Sense) directly formalizes Rich Hickey's ontology of information and namespacing as articulated in Phosphene's Federated Knowledge Architecture (`meta/mdrag/federated-knowledge-architecture.md`):
+
+### Decoupling Semantics from Container Shape (Rejecting Nominalism)
+In traditional object-oriented and schema-first architectures, defining classes such as `Specimen { id: str }` and `Paleodeme { id: str }` redefines the concept of "id" redundantly, conflating the biological *sense* of identification with the transient data structure holding it.
+* **The Global Semantic Atom:** Under FKA §2.1 and Hickey's specification model, a qualified keyword such as `:specimen/id` or `:paleodeme/id` is an invariant semantic atom. Its **sense** is defined globally and once.
+* **Sense vs. Referent in Morphodynamics:**
+  - **Sense:** `:specimen/id` represents the unique, immutable identity of an excavated fossil element.
+  - **Referent:** At runtime, the referent may be an alphanumeric catalog string (`"KNM-ER 1470"`), a 128-bit UUID, or an integer index in a sparse coordinate tensor. The referent varies by solver substrate, while the sense remains invariant.
+  - **Sign:** The namespaced symbol or keyword (`:specimen/id`).
+* **Selection over Structural Typing:** Views, CSV exports, Polars DataFrames, or Clojure maps merely *select* these semantic atoms. The presence of partial or optional data does not indicate broken data; it reflects honest partial fossil observation.
+
+### Open-World Namespaces as Invariant Partitions
+* **FKA §9 (Namespace Naming Principles):** Namespaces satisfy two criteria simultaneously: global unambiguity and semantic self-description.
+* **Avoiding Clunky Identifiers:** By letting the namespace carry the domain context (e.g., `canonical.galapagos/` vs. `inference.hominin/`), individual signs remain short, narrow, and unpolluted by defensive prefixes (`carrying-capacity`, not `hominin-continental-carrying-capacity`).
+* **Annotations of the Future (OWA):** When unfamiliar keys appear (e.g., `:foley/ricardian-niche`), the Open-World parser preserves them under the provider's namespace rather than failing. This cleanly decouples structural intake (Pull) from semantic validation and modeling (Transform).
+
