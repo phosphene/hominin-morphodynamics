@@ -20,6 +20,7 @@ dev = [
     "duckdb>=1.0.0",
     "hypothesis>=6.170.15",
     "scipy>=1.17.1",
+    "behave>=1.2.6",
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -35,4 +36,5 @@ dev = [
     "duckdb>=1.0.0",
     "hypothesis>=6.170.15",
     "scipy>=1.17.1",
+    "behave>=1.2.6",
 ]
