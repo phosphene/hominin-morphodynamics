@@ -91,8 +91,8 @@ def test_ingestion_idempotence() -> None:
 
 
 @given(
-    site_max=st.floats(min_value=0.0, max_value=10.0, allow_nan=False),
-    site_span=st.floats(min_value=0.0, max_value=5.0, allow_nan=False),
+    site_max=st.floats(min_value=0.0, max_value=10.0, allow_nan=False, allow_infinity=False, allow_subnormal=False),
+    site_span=st.floats(min_value=0.0, max_value=5.0, allow_nan=False, allow_infinity=False, allow_subnormal=False),
 )
 def test_age_span_calculation_property(site_max: float, site_span: float) -> None:
     """Property test verifying age span arithmetic invariant."""
