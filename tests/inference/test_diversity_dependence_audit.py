@@ -9,9 +9,13 @@ from hominin_morphodynamics.inference.pyrate_audit import (
     audit_mcmc_log,
 )
 
-PUBLISHED_OUTPUTS = Path(
+# Resolve repo-local raw data first, falling back to workspace path if present
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+LOCAL_OUTPUTS = REPO_ROOT / "data/raw/van_holstein_2024/PyRate/Outputs"
+WORKSPACE_OUTPUTS = Path(
     "/home/node/.openclaw/workspace/work/marsyas6/papers/valence-ingress/data/van-holstein/Data_Code_Final/PyRate/Outputs"
 )
+PUBLISHED_OUTPUTS = LOCAL_OUTPUTS if LOCAL_OUTPUTS.exists() else WORKSPACE_OUTPUTS
 
 
 def test_diversity_dependence_credible_intervals_span_zero() -> None:

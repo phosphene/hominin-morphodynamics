@@ -56,7 +56,7 @@ To evaluate macroevolutionary models with inferential rigor, we avoid evaluating
 
 ## 3. Repository Architecture & Sovereign Tiers
 
-The codebase enforces strict separation across four sovereign scientific tiers (`docs/EPISTEMIC_TAXONOMY_AND_BOUNDARY_SEPARATION.md`):
+The codebase maintains clear separation across four sovereign scientific tiers (`docs/EPISTEMIC_TAXONOMY_AND_BOUNDARY_SEPARATION.md`):
 
 ```
 hominin-morphodynamics/
@@ -79,6 +79,7 @@ hominin-morphodynamics/
 │       ├── galapagos_etienne_2012/    # Calibrating island avifauna matrices
 │       └── van_holstein_2024/         # Ingested hominin time series & consensus trees
 ├── docs/                              # Literate specifications, audits, and close reads
+│   ├── HYPOTHESIS_PATTERNS_AND_CALIBRATION.md
 │   ├── CANONICAL_ETIENNE_APPLICATION_TO_HOMININS.md
 │   ├── COMPARATIVE_PAPER_ETIENNE_VS_FOLEY.md
 │   ├── PRECURSOR_MODELS_AND_THEORETICAL_DERIVATION.md
