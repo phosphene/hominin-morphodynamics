@@ -1,51 +1,22 @@
 """Mathematical primitives for macroevolutionary birth-death and preservation.
 
-Pure functional implementations of canonical diversification and observation equations.
-Decomposed from first principles:
-- Kendall (1948): Continuous-time Markov birth-death process
-- Keiding (1975): Survival conditioning for observable lineages
-- Foote (1997): Continuous preservation and sampling probabilities
-- Silvestro et al. (2014, 2019): Diversity-dependent hazard functions
-- Jetz et al. (2012): Tip diversification rate (DR) metric
-
-All primitives are numerically stable, operating in log-space where appropriate,
-using expm1/log1p to prevent catastrophic floating-point cancellation.
+Re-exports and wraps phosphene.holonomy.macroevo.primitives for hominin-morphodynamics.
 """
 
 from __future__ import annotations
 
 import math
 from typing import Sequence
-
 import numpy as np
 
-
-def log_diversity_hazard(
-    base_rate: float,
-    g_coeff: float,
-    diversity: float,
-    clamp_bound: float = 50.0,
-) -> float:
-    """Primitive 1: Numerically stable log-hazard under exponential diversity-dependence.
-
-    Formula:
-        lambda(D) = lambda_0 * exp(G_l * D)
-        ln lambda(D) = ln(lambda_0) + G_l * D
-
-    Invariants:
-        1. base_rate must be strictly positive.
-        2. diversity must be non-negative.
-        3. Returns finite log-hazard clamped within [-clamp_bound, +clamp_bound]
-           to prevent IEEE 754 overflow/underflow.
-    """
-    if base_rate <= 0.0:
-        raise ValueError(f"base_rate must be > 0.0, got {base_rate}")
-    if diversity < 0.0:
-        raise ValueError(f"diversity must be >= 0.0, got {diversity}")
-
-    exponent = g_coeff * diversity
-    clamped_exponent = max(-clamp_bound, min(clamp_bound, exponent))
-    return math.log(base_rate) + clamped_exponent
+import phosphene.holonomy.macroevo.primitives as _prims
+from phosphene.holonomy.macroevo.primitives import (
+    log_diversity_hazard,
+    log_keiding_conditioning,
+    log_poisson_occurrences,
+    log_extinction_density,
+    regularized_inverse_branch_length,
+)
 
 
 def diversity_dependent_hazard(
@@ -64,13 +35,6 @@ def keiding_sampling_probability(
     """Primitive 2: Keiding (1975) preservation conditioning probability.
 
     Calculates P(K >= 1 | theta) = 1 - exp(-theta), where theta = int_e^s q(t) dt.
-
-    Uses -expm1(-theta) to avoid catastrophic cancellation when theta << 1.
-
-    Invariants:
-        1. Returns 0.0 when q_integral <= 0.0.
-        2. Strictly bounded in [0.0, 1.0].
-        3. Monotonically increasing with q_integral.
     """
     if q_integral <= 0.0:
         return 0.0
@@ -80,11 +44,7 @@ def keiding_sampling_probability(
 def keiding_log_conditioning(
     q_integral: float,
 ) -> float:
-    """Primitive 2b: Log of Keiding conditioning probability ln(1 - exp(-theta)).
-
-    Uses log(-expm1(-theta)) to eliminate cancellation artifacts.
-    Returns -inf when q_integral <= 0.0.
-    """
+    """Primitive 2b: Log of Keiding conditioning probability ln(1 - exp(-theta))."""
     if q_integral <= 0.0:
         return -math.inf
     p = -np.expm1(-q_integral)
@@ -99,17 +59,7 @@ def poisson_occurrence_loglik(
     e: float,
     q: float,
 ) -> float:
-    """Primitive 3: Inhomogeneous/homogeneous Poisson occurrence log-likelihood.
-
-    Given fossil occurrence dates t_1, ..., t_k within active lifespan [e, s]
-    (with s >= e >= 0 in Ma before present):
-        ln L = sum_{j=1}^k ln q - q * (s - e)
-
-    Invariants:
-        1. All occurrence times must fall within [e, s].
-        2. q must be strictly positive.
-        3. When k == 0, returns -q * (s - e).
-    """
+    """Primitive 3: Inhomogeneous/homogeneous Poisson occurrence log-likelihood."""
     if s < e:
         raise ValueError(f"Speciation time s ({s}) must be >= extinction time e ({e})")
     if q <= 0.0:
@@ -135,16 +85,7 @@ def lineage_duration_loglik(
     mu_mean: float,
     is_extinct: bool = True,
 ) -> float:
-    """Primitive 4: Continuous lineage duration and extinction event log-likelihood.
-
-    Under constant or mean extinction hazard mu:
-        - If extinct (e > 0 or is_extinct): ln L = ln(mu) - mu * (s - e)
-        - If extant (e == 0 and not is_extinct): ln L = -mu * (s - e)
-
-    Invariants:
-        1. s >= e >= 0.
-        2. mu_mean > 0.
-    """
+    """Primitive 4: Continuous lineage duration and extinction event log-likelihood."""
     if s < e:
         raise ValueError(f"Speciation time s ({s}) must be >= extinction time e ({e})")
     if mu_mean <= 0.0:
@@ -163,15 +104,7 @@ def standing_diversity_trajectory(
     lineage_intervals: Sequence[tuple[float, float]],
     eval_times: Sequence[float] | np.ndarray,
 ) -> np.ndarray:
-    """Primitive 5: Standing diversity step-function D(t).
-
-    Calculates exact active lineage count at each time point in eval_times.
-    Lineage i is active at t if s_i >= t >= e_i.
-
-    Invariants:
-        1. Non-negative integer values.
-        2. Exact step function matching closed intervals [e, s].
-    """
+    """Primitive 5: Standing diversity step-function D(t)."""
     times = np.asarray(eval_times, dtype=np.float64)
     counts = np.zeros(len(times), dtype=np.int64)
 
@@ -193,15 +126,6 @@ def tip_diversification_rate(
     Formula:
         DR_i = sum_{j=1}^N (1/2)^{j-1} * (1 / l_j)
     where l_1 is terminal branch length, l_2 is parent branch, etc.
-
-    Numerical defense:
-        Regularizes branch lengths below min_branch_length to prevent
-        infinite division singularities on near-zero internal branches (polytomies).
-
-    Invariants:
-        1. Empty sequence returns 0.0.
-        2. All branch lengths regularized to at least min_branch_length > 0.
-        3. Monotonically decreases as branch lengths increase (longer branches = slower diversification).
     """
     if not branch_lengths:
         return 0.0
@@ -215,3 +139,19 @@ def tip_diversification_rate(
         dr += weight / reg_l
 
     return float(dr)
+
+
+__all__ = [
+    "log_diversity_hazard",
+    "diversity_dependent_hazard",
+    "keiding_sampling_probability",
+    "keiding_log_conditioning",
+    "poisson_occurrence_loglik",
+    "lineage_duration_loglik",
+    "standing_diversity_trajectory",
+    "tip_diversification_rate",
+    "log_keiding_conditioning",
+    "log_poisson_occurrences",
+    "log_extinction_density",
+    "regularized_inverse_branch_length",
+]
