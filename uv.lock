@@ -431,7 +431,7 @@ wheels = [
 [[package]]
 name = "phosphene-holonomy"
 version = "0.1.0"
-source = { git = "https://github.com/phosphene/holonomy#b2378cdeb9adb573cf7542ec8a37e6c5b89cae44" }
+source = { git = "https://github.com/phosphene/holonomy#b054764db97d819893dc9e3beea6963823860ed7" }
 dependencies = [
     { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "numpy", version = "2.5.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
