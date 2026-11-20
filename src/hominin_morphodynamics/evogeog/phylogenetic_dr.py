@@ -1,128 +1,30 @@
-"""Tree parsing, path extraction, and Tip Diversification Rate (DR) auditing.
+"""Hominin phylogenetic Tip DR auditing and OLS regression (Tier 1 Forensics).
 
-Replicates and audits the phylogenetic diversification analyses in Van Holstein & Foley (2024)
-based on the Parins-Fukuchi et al. (2019) hominin tree.
-
-Engineering & Methodological Contracts:
-1. Dynamic Newick parsing: no hardcoded tree literals or ad-hoc branch path dictionaries.
-2. Clean separation of external artifacts: trees are ingested as external files/fixtures.
-3. Numerical singularity diagnostics: explicitly detects and exposes polytomy machine-epsilon
-   artifacts (< 1e-6 Myr / picoseconds) that cause Jetz et al. (2012) tip DR to explode to 10^11.
+Delegates pure Newick parsing and Jetz et al. (2012) Tip DR math to
+``phosphene.holonomy.macroevo``, keeping disk I/O (Pull) and hominin-specific
+outgroup filtering / OLS regression cleanly in ``hominin-morphodynamics``.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence
+from typing import Dict, List, Sequence
 
 import numpy as np
 from scipy import stats
 
-from hominin_morphodynamics.inference.primitives import tip_diversification_rate
-
-
-@dataclass
-class PhyloNode:
-    """Minimal typed node representing an unrooted or rooted phylogenetic tree."""
-
-    name: Optional[str] = None
-    branch_length: float = 0.0
-    children: List[PhyloNode] = field(default_factory=list)
-    parent: Optional[PhyloNode] = None
-
-
-def parse_newick(newick_str: str) -> PhyloNode:
-    """Parse standard Newick string into a PhyloNode hierarchy.
-
-    Supports internal node labels and branch lengths: (A:1.0,(B:2.0)C:1.5):0.0;
-    """
-    s = newick_str.strip()
-    if s.endswith(";"):
-        s = s[:-1]
-
-    tokens: list[str] = []
-    i, n = 0, len(s)
-    while i < n:
-        c = s[i]
-        if c in "(),:;":
-            tokens.append(c)
-            i += 1
-        elif c.isspace():
-            i += 1
-        else:
-            j = i
-            while j < n and s[j] not in "(),:; \t\r\n":
-                j += 1
-            tokens.append(s[i:j])
-            i = j
-
-    curr = PhyloNode()
-    root = curr
-    idx, num_tokens = 0, len(tokens)
-    while idx < num_tokens:
-        tok = tokens[idx]
-        if tok == ";":
-            idx += 1
-            break
-        elif tok == "(":
-            child = PhyloNode(parent=curr)
-            curr.children.append(child)
-            curr = child
-            idx += 1
-        elif tok == ",":
-            curr = curr.parent
-            child = PhyloNode(parent=curr)
-            curr.children.append(child)
-            curr = child
-            idx += 1
-        elif tok == ")":
-            curr = curr.parent
-            idx += 1
-            if idx < num_tokens and tokens[idx] not in "(),:;":
-                curr.name = tokens[idx]
-                idx += 1
-            if idx < num_tokens and tokens[idx] == ":":
-                idx += 1
-                curr.branch_length = float(tokens[idx])
-                idx += 1
-        elif tok == ":":
-            idx += 1
-            curr.branch_length = float(tokens[idx])
-            idx += 1
-        else:
-            curr.name = tok
-            idx += 1
-
-    return root
-
-
-def extract_tip_paths(
-    node: PhyloNode,
-    paths: Optional[Dict[str, List[float]]] = None,
-    current_path: Optional[List[float]] = None,
-) -> Dict[str, List[float]]:
-    """Extract sequence of branch lengths from named node up to root [terminal, parent, ...]."""
-    if paths is None:
-        paths = {}
-    if current_path is None:
-        current_path = []
-
-    if node.name:
-        paths[node.name] = [node.branch_length] + current_path
-
-    for child in node.children:
-        child_path = [node.branch_length] + current_path if node.parent is not None else []
-        extract_tip_paths(child, paths, child_path)
-
-    return paths
+from phosphene.holonomy.macroevo import (
+    newick_tip_paths,
+    tip_dr,
+    tip_dr_diagnostic,
+)
 
 
 def load_tree_paths_from_file(tree_path: Path) -> Dict[str, List[float]]:
-    """Load and parse an external Newick tree file, returning tip-to-root branch length sequences."""
+    """Pull an external Newick tree file and extract tip-to-root branch length sequences."""
     content = tree_path.read_text().strip()
-    root = parse_newick(content)
-    return extract_tip_paths(root)
+    return {taxon: list(lengths) for taxon, lengths in newick_tip_paths(content).items()}
 
 
 @dataclass(frozen=True)
@@ -140,37 +42,32 @@ def audit_phylogenetic_tree_tips(
     regularization_floor: float = 1e-4,
     outgroups: Sequence[str] = ("Gorilla_gorilla", "Pan_troglodytes"),
 ) -> list[TipDRAuditRecord]:
-    """Calculate regularized vs raw tip DR for all ingroup tips in a phylogeny."""
+    """Calculate regularized vs raw Jetz (2012) Tip DR for all ingroup tips in a phylogeny."""
     if isinstance(tree_path_or_dict, Path):
         tip_paths = load_tree_paths_from_file(tree_path_or_dict)
     else:
         tip_paths = tree_path_or_dict
 
     records: list[TipDRAuditRecord] = []
-
     for name, path in tip_paths.items():
         if name in outgroups:
             continue
 
-        is_homo = name.startswith("Homo")
-        term_l = path[0]
-
-        # Regularized DR using Primitive 6
-        dr_reg = tip_diversification_rate(path, min_branch_length=regularization_floor)
-
-        # Raw DR (unregularized)
-        dr_raw = tip_diversification_rate(path, min_branch_length=1e-15)
-
-        has_artifact = any(l < 1e-6 for l in path)
+        diag = tip_dr_diagnostic(
+            path,
+            min_branch_length=regularization_floor,
+            singularity_threshold=1e-6,
+        )
+        dr_raw = tip_dr(path, min_branch_length=1e-15)
 
         records.append(
             TipDRAuditRecord(
                 species_name=name,
-                is_homo=is_homo,
-                terminal_branch_ma=round(term_l, 4),
-                tip_dr_regularized=round(dr_reg, 4),
+                is_homo=name.startswith("Homo"),
+                terminal_branch_ma=round(diag.terminal_branch_length, 4),
+                tip_dr_regularized=round(diag.diversification_rate, 4),
                 tip_dr_raw=round(dr_raw, 2),
-                has_polytomy_artifact=has_artifact,
+                has_polytomy_artifact=diag.has_singularity,
             )
         )
 

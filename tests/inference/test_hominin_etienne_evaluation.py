@@ -59,3 +59,19 @@ def test_hominin_carrying_capacity_is_non_identifiable():
     idx_500 = k_grid.index(500.0)
     diff_15_500 = abs(lls[idx_15] - lls[idx_500])
     assert diff_15_500 < 0.40
+
+
+def test_hominin_kneebone_background_realization_touchpoint():
+    """Verify latest holonomy Kneebone Background Realization is directly available to hominin evaluations."""
+    from phosphene.holonomy.macroevo import BackgroundRealizationReport, background_realization
+
+    report = background_realization(
+        branching_times=HOMO_BRANCHING_TIMES_MA,
+        lam0=1.0,
+        mu0=0.1,
+        K=20.0,
+    )
+    assert isinstance(report, BackgroundRealizationReport)
+    assert np.isfinite(report.rung0_loglik)
+    assert np.isfinite(report.rung3_loglik)
+    assert report.bottleneck_regime == "interior_radiation"
