@@ -148,15 +148,15 @@ class TestPoissonOccurrencePrimitives:
     """
 
     @given(
-        s=finite_positive_floats(min_val=1.0, max_val=10.0),
+        e=finite_positive_floats(min_val=0.0, max_val=10.0),
         duration=finite_positive_floats(min_val=0.1, max_val=5.0),
         q=finite_positive_floats(min_val=0.01, max_val=10.0),
     )
     def test_poisson_loglik_properties(
-        self, s: float, duration: float, q: float
+        self, e: float, duration: float, q: float
     ) -> None:
         """Verify exact closed-form equivalence for internal occurrence points."""
-        e = s - duration
+        s = e + duration
         # 2 occurrences placed at 25% and 75% along lifespan
         t1 = e + 0.25 * duration
         t2 = e + 0.75 * duration
@@ -170,9 +170,9 @@ class TestPoissonOccurrencePrimitives:
         assert defect <= 1e-9
 
     def test_poisson_rejections(self) -> None:
-        """Reject occurrences located outside lineage lifespan interval."""
-        with pytest.raises(ValueError, match="outside lineage lifespan"):
-            poisson_occurrence_loglik([2.5], s=2.0, e=1.0, q=1.0)
+        """Occurrences outside lineage lifespan yield exact model falsification (-inf)."""
+        ll = poisson_occurrence_loglik([2.5], s=2.0, e=1.0, q=1.0)
+        assert ll == -math.inf
 
 
 class TestLineageDurationPrimitives:
@@ -214,13 +214,14 @@ class TestTipDiversificationRatePrimitive:
     """
 
     def test_regularization_prevents_division_by_zero(self) -> None:
-        """Near-zero branch length (e.g. Parins-Fukuchi 4.82e-12) clamped to floor."""
+        """Near-zero branch length (e.g. Parins-Fukuchi 4.82e-12) clamped to floor under Jetz (2012)."""
         near_zero_branches = [1.0, 4.82e-12, 0.5]
         dr = tip_diversification_rate(near_zero_branches, min_branch_length=1e-4)
 
         assert math.isfinite(dr)
-        # DR = (1/1.0) + 0.5*(1/1e-4) + 0.25*(1/0.5) = 1 + 5000 + 0.5 = 5001.5
-        assert math.isclose(dr, 5001.5, rel_tol=1e-5)
+        # Canonical Jetz (2012): ES = 1.0 + 0.5*(1e-4) + 0.25*(0.5) = 1.12505; DR = 1 / ES
+        expected_dr = 1.0 / (1.0 + 0.5 * 1e-4 + 0.25 * 0.5)
+        assert math.isclose(dr, expected_dr, rel_tol=1e-12)
 
     @given(
         l1=finite_positive_floats(min_val=0.1, max_val=5.0),

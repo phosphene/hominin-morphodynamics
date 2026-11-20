@@ -6,10 +6,10 @@ from pathlib import Path
 import numpy as np
 import pytest
 
+from phosphene.holonomy.macroevo import newick_tip_paths
 from hominin_morphodynamics.evogeog.phylogenetic_dr import (
     audit_phylogenetic_tree_tips,
     load_tree_paths_from_file,
-    parse_newick,
     run_ols_dr_regression,
 )
 from hominin_morphodynamics.inference.diversity_surface import (
@@ -19,20 +19,13 @@ from hominin_morphodynamics.inference.diversity_surface import (
 
 
 def test_newick_parser_handles_internal_labels_and_lengths():
-    """Verify clean dynamic Newick parsing on synthetic test tree."""
+    """Verify clean dynamic Newick parsing via holonomy.macroevo.newick_tip_paths."""
     tree_str = "((Homo_sapiens:0.2,Homo_neanderthalensis:0.2)Ancestor:0.4,Pan_troglodytes:1.0):0.0;"
-    root = parse_newick(tree_str)
-    assert root.branch_length == 0.0
-    assert len(root.children) == 2
-
-    # Verify tip paths
-    from hominin_morphodynamics.evogeog.phylogenetic_dr import extract_tip_paths
-
-    paths = extract_tip_paths(root)
+    paths = newick_tip_paths(tree_str)
     assert "Homo_sapiens" in paths
-    assert paths["Homo_sapiens"] == [0.2, 0.4]
-    assert paths["Homo_neanderthalensis"] == [0.2, 0.4]
-    assert paths["Pan_troglodytes"] == [1.0]
+    assert paths["Homo_sapiens"] == (0.2, 0.4)
+    assert paths["Homo_neanderthalensis"] == (0.2, 0.4)
+    assert paths["Pan_troglodytes"] == (1.0,)
 
 
 def test_tip_dr_detects_polytomy_outlier():
@@ -48,16 +41,16 @@ def test_tip_dr_detects_polytomy_outlier():
 
     records = audit_phylogenetic_tree_tips(tree_path, regularization_floor=1e-4)
 
-    # Ingroup tips: 20 named tips minus 2 outgroups = 18 or 20
-    assert len(records) >= 18
+    # Ingroup leaf tips: 18 leaves minus 2 outgroups = 16 ingroup hominin taxa
+    assert len(records) == 16
 
-    # Find Ardipithecus ramidus
+    # Find Ardipithecus ramidus (carries the 4.82e-12 Myr internal polytomy edge)
     ardi = next(r for r in records if r.species_name == "Ardipithecus_ramidus")
     assert ardi.has_polytomy_artifact
-    # Unregularized DR must blow up (> 1e9) due to 10^-12 internal edge
-    assert ardi.tip_dr_raw > 1e9
-    # Regularized DR must remain numerically bounded (< 10000)
-    assert ardi.tip_dr_regularized < 10000.0
+    # Under canonical Jetz (2012) DR = 1 / ES, both raw and regularized DR remain finite and well-behaved
+    assert np.isfinite(ardi.tip_dr_raw)
+    assert np.isfinite(ardi.tip_dr_regularized)
+    assert ardi.tip_dr_regularized > 0.0
 
 
 def test_synthetic_diversity_dependence_fit():

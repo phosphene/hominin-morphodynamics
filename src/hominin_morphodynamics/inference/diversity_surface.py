@@ -1,30 +1,19 @@
-"""Evaluation of diversity-dependent speciation and extinction likelihood surfaces.
+"""Hominin diversity-dependent speciation likelihood surface evaluation.
 
-Replicates and extends the continuous diversity-dependent birth-death models of
-Silvestro et al. (2014, 2019) and Van Holstein & Foley (2024).
-
-Implements:
-1. Exact profile likelihood estimation for baseline speciation (lambda0)
-   and diversity-dependence slope (Gl) under lambda(D) = lambda0 * exp(Gl * D).
-2. Numerical quadrature of cumulative speciation hazard over LTT diversity trajectories.
-3. Likelihood-Ratio Tests (LRT) and chi-square significance testing against
-   the null model of density-independent diversification (Gl = 0).
-4. Stratified evaluation comparing whole-clade, non-Homo, and Homo subsets
-   across all 5 empirical time datasets (Fine TPP, Fine NHPP, Broad TPP,
-   Broad NHPP, and Wood-Boyle).
+Delegates all numerical profile-likelihood math to
+``phosphene.holonomy.macroevo.continuous_profile_likelihood_surface``, keeping
+hominin-specific dataset orchestration (Pull) cleanly separated.
 """
 
 from __future__ import annotations
 
-import math
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
 
 import numpy as np
-from scipy import optimize, stats
 
-from hominin_morphodynamics.inference.primitives import log_diversity_hazard
+from phosphene.holonomy.macroevo import continuous_profile_likelihood_surface
 
 
 @dataclass(frozen=True)
@@ -44,7 +33,7 @@ class DiversityModelResult:
     is_significant_at_05: bool
     aic_null: float
     aic_full: float
-    delta_aic: float  # aic_null - aic_full (positive favors full model)
+    delta_aic: float
 
 
 def fit_diversity_dependence(
@@ -56,117 +45,36 @@ def fit_diversity_dependence(
     clade_group: str = "all",
     is_per_lineage_process: bool = True,
 ) -> DiversityModelResult:
-    """Fit exponential diversity-dependence model and run Likelihood-Ratio Test against null (Gl=0).
-
-    Mathematical Formulation (Silvestro et al. 2014 Syst Biol, Etienne et al. 2012):
-        Per-lineage speciation rate:
-            lambda(D(t)) = lambda0 * exp(Gl * D(t))
-        Clade-wide speciation hazard:
-            Lambda_clade(t) = D(t) * lambda(D(t))  [if is_per_lineage_process]
-            Lambda_clade(t) = lambda(D(t))          [if aggregate point process]
-
-    Log-Likelihood:
-        ln L = sum_{i=1}^N ln Lambda_clade(ts_i) - integral_0^T Lambda_clade(t) dt
-
-    Invariants:
-        1. lambda0 > 0.
-        2. Gl is unconstrained in [-10, 10].
-        3. Under null model (Gl = 0), analytic MLE lambda0 is recovered.
-    """
-    ts_arr = np.array(speciation_times_ma)
-    n_sp = len(ts_arr)
-    if n_sp == 0:
-        raise ValueError("Cannot fit diversity dependence on empty speciation times sequence.")
-
-    # Sort LTT ascending in time
-    order = np.argsort(ltt_time_grid_ma)
-    t_grid = ltt_time_grid_ma[order]
-    d_grid = ltt_diversity_grid[order]
-
-    # Evaluate standing diversity D(ts) at each speciation event
-    def div_at_t(t: float) -> float:
-        idx = np.searchsorted(t_grid, t)
-        if idx >= len(d_grid):
-            idx = len(d_grid) - 1
-        return float(d_grid[idx])
-
-    d_at_events = np.array([div_at_t(float(t)) for t in ts_arr])
-
-    # Discretize integration interval [0, t_max_eval_ma]
-    mask = t_grid[:-1] <= t_max_eval_ma
-    dt = np.diff(t_grid)[mask]
-    d_eval = d_grid[:-1][mask]
-
-    # Base scaling for per-lineage vs aggregate
-    scale_events = np.log(np.maximum(1.0, d_at_events)) if is_per_lineage_process else np.zeros_like(d_at_events)
-    scale_grid = d_eval if is_per_lineage_process else np.ones_like(d_eval)
-
-    def profile_gl(gl: float) -> tuple[float, float]:
-        """Profile likelihood over Gl by solving lambda0 analytically."""
-        g_d_events = np.clip(gl * d_at_events, -50.0, 50.0)
-        g_d_grid = np.clip(gl * d_eval, -50.0, 50.0)
-        integral_factor = float(np.sum(scale_grid * np.exp(g_d_grid) * dt))
-        if integral_factor <= 0.0 or not np.isfinite(integral_factor):
-            return -1e12, 1e-5
-        l0 = max(1e-6, n_sp / integral_factor)
-        ll = float(np.sum(np.log(l0) + scale_events + g_d_events) - l0 * integral_factor)
-        return ll, l0
-
-    # 1. Null Model (Gl = 0.0)
-    ll_null, l0_null = profile_gl(0.0)
-
-    # 2. Full Model (Profile optimization over Gl)
-    opt_res = optimize.minimize_scalar(
-        lambda gl: -profile_gl(float(gl))[0],
-        bounds=(-10.0, 10.0),
-        method="bounded",
+    """Fit exponential diversity-dependence model via ``holonomy.macroevo``."""
+    surf = continuous_profile_likelihood_surface(
+        speciation_times=speciation_times_ma,
+        ltt_time_grid=ltt_time_grid_ma,
+        ltt_diversity_grid=ltt_diversity_grid,
+        t_max_eval=t_max_eval_ma,
+        is_per_lineage_process=is_per_lineage_process,
     )
-    mle_gl = float(opt_res.x)
-    ll_full, l0_full = profile_gl(mle_gl)
-
-    # If full likelihood is numerically worse than null due to boundary effects, clamp to null
-    if ll_full < ll_null:
-        ll_full = ll_null
-        l0_full = l0_null
-        mle_gl = 0.0
-
-    # LRT Statistic: 2 * (ln L_full - ln L_null)
-    lrt_stat = max(0.0, 2.0 * (ll_full - ll_null))
-    p_val = float(1.0 - stats.chi2.cdf(lrt_stat, df=1))
-
-    # Information criteria: 1 parameter for null, 2 for full
-    aic_null = 2 * 1 - 2 * ll_null
-    aic_full = 2 * 2 - 2 * ll_full
-    delta_aic = aic_null - aic_full
-
     return DiversityModelResult(
         config_name=config_name,
         clade_group=clade_group,
-        num_species=n_sp,
-        null_loglik=round(ll_null, 4),
-        null_lambda0=round(l0_null, 4),
-        full_loglik=round(ll_full, 4),
-        full_lambda0=round(l0_full, 4),
-        mle_gl=round(mle_gl, 4),
-        lrt_stat=round(lrt_stat, 4),
-        p_value=round(p_val, 4),
-        is_significant_at_05=(p_val < 0.05),
-        aic_null=round(aic_null, 4),
-        aic_full=round(aic_full, 4),
-        delta_aic=round(delta_aic, 4),
+        num_species=len(speciation_times_ma),
+        null_loglik=round(surf.null_log_lik, 4),
+        null_lambda0=round(surf.null_lambda0, 4),
+        full_loglik=round(surf.max_log_lik, 4),
+        full_lambda0=round(surf.best_lambda0, 4),
+        mle_gl=round(surf.best_g_l, 4),
+        lrt_stat=round(surf.likelihood_ratio, 4),
+        p_value=round(surf.p_value, 4),
+        is_significant_at_05=surf.excludes_zero(alpha=0.05),
+        aic_null=round(surf.aic_null, 4),
+        aic_full=round(surf.aic_full, 4),
+        delta_aic=round(surf.delta_aic, 4),
     )
 
 
 def audit_van_holstein_empirical_grid(
     outputs_dir: Path,
 ) -> list[DiversityModelResult]:
-    """Run full empirical replication across all 5 datasets in PyRate/Outputs.
-
-    Evaluates:
-    - Homo subset (N=7 taxa)
-    - Non-Homo subset (N=10 taxa)
-    - Whole Clade (N=17 taxa)
-    """
+    """Run empirical replication across all 5 Van Holstein & Foley (2024) PyRate datasets."""
     configs = [
         ("Fine_occurrence_level/TPP", "Fine TPP", 3.0, 5.0),
         ("Fine_occurrence_level/NHPP", "Fine NHPP", 3.0, 5.0),
@@ -188,44 +96,26 @@ def audit_van_holstein_empirical_grid(
         ltt_data = np.loadtxt(ltt_file, skiprows=1)
         t_grid = ltt_data[:, 0]
         d_grid = ltt_data[:, 1]
-
         species_data = np.loadtxt(times_file, skiprows=1)
 
         homo_ts = [row[2] for row in species_data if int(row[1]) in homo_ids]
         nonhomo_ts = [row[2] for row in species_data if int(row[1]) not in homo_ids]
         all_ts = [row[2] for row in species_data]
 
-        # 1. Homo
-        res_homo = fit_diversity_dependence(
-            speciation_times_ma=homo_ts,
-            ltt_time_grid_ma=t_grid,
-            ltt_diversity_grid=d_grid,
-            t_max_eval_ma=t_homo,
-            config_name=display_name,
-            clade_group="Homo",
-        )
-        results.append(res_homo)
-
-        # 2. Non-Homo
-        res_nonhomo = fit_diversity_dependence(
-            speciation_times_ma=nonhomo_ts,
-            ltt_time_grid_ma=t_grid,
-            ltt_diversity_grid=d_grid,
-            t_max_eval_ma=t_clade,
-            config_name=display_name,
-            clade_group="Non-Homo",
-        )
-        results.append(res_nonhomo)
-
-        # 3. Whole Clade
-        res_clade = fit_diversity_dependence(
-            speciation_times_ma=all_ts,
-            ltt_time_grid_ma=t_grid,
-            ltt_diversity_grid=d_grid,
-            t_max_eval_ma=t_clade,
-            config_name=display_name,
-            clade_group="Whole-Clade",
-        )
-        results.append(res_clade)
+        for group, ts, t_eval in (
+            ("Homo", homo_ts, t_homo),
+            ("Non-Homo", nonhomo_ts, t_clade),
+            ("Whole-Clade", all_ts, t_clade),
+        ):
+            results.append(
+                fit_diversity_dependence(
+                    speciation_times_ma=ts,
+                    ltt_time_grid_ma=t_grid,
+                    ltt_diversity_grid=d_grid,
+                    t_max_eval_ma=t_eval,
+                    config_name=display_name,
+                    clade_group=group,
+                )
+            )
 
     return results
