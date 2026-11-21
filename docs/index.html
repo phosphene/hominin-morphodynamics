@@ -207,7 +207,7 @@
     <div class="card">
       <h2>1. The Four-Panel Calibration Matrix</h2>
       <p>
-        The figure below exhibits profile log-likelihood curves \(\ln L(K)\) computed across carrying capacity \(K\) using the unified continuous-time master equation solver in <code>phosphene-holonomy</code>. Each curve scans candidate \(K\) from the physical lower boundary through \(K = 500\) under crown conditioning (\(\text{soc} = 2\)).
+        The figure below exhibits profile log-likelihood curves \(\ln L(K)\) computed across carrying capacity \(K\) using the continuous-time diversity-dependent ODE solver (Kolmogorov forward equations) in <code>phosphene-holonomy</code>. Each curve scans candidate \(K\) from the physical lower boundary through \(K = 500\) under crown conditioning (\(\text{soc} = 2\)).
       </p>
 
       <div class="plot-container">
@@ -240,7 +240,7 @@
             Following our Simulation-Based Calibration (SBC) protocol, we forward-simulated a bifurcating crown radiation via the continuous-time Gillespie algorithm under known parameters (\(\lambda_0 = 1.5, \mu_0 = 0.2, K = 20.0\)).
           </p>
           <p>
-            The surviving reconstructed tree (\(S = 16\) tips) was inverted through the master equation without providing the true parameters. The likelihood surface forms a clear, convex interior maximum peaking at \(\hat{K} = 20.0\), with unconstrained expansion (\(K = 100\)) rejected by \(\Delta\ln L = 3.51\text{ nats}\).
+            The surviving reconstructed tree (\(S = 16\) tips) was inverted through the likelihood solver without providing the true parameters. The likelihood surface forms a clear, convex interior maximum peaking at \(\hat{K} = 20.0\), with unconstrained expansion (\(K = 100\)) rejected by \(\Delta\ln L = 3.51\text{ nats}\).
           </p>
         </div>
 
@@ -250,14 +250,14 @@
             A critical hazard in non-linear macroevolutionary models is <em>false positive capacity identification</em>—where unconstrained constant-rate turnover produces spurious interior peaks due to stochastic clustering of branching times.
           </p>
           <p>
-            Simulating under pure density-independent birth-death demonstrates the null control: the profile is strictly non-decreasing toward large \(K\). The master equation refuses to manufacture a finite carrying capacity out of unconstrained noise.
+            Simulating under pure density-independent birth-death demonstrates the null control: the profile is strictly non-decreasing toward large \(K\). The solver refuses to manufacture a finite carrying capacity out of unconstrained noise.
           </p>
         </div>
 
         <div class="discourse-item">
           <h4 style="color: var(--accent-rose);">(D) Continental Hominins (<em>Homo</em>, \(S = 7\))</h4>
           <p>
-            Van Holstein &amp; Foley (2024) posited that Plio-Pleistocene hominins experienced diversity-dependent speciation. When their audited branching horizons (\(2.80\text{ Ma}\)) are submitted to the identical master equation, the profile is dead flat.
+            Van Holstein &amp; Foley (2024) posited that Plio-Pleistocene hominins experienced diversity-dependent speciation. When their audited branching horizons (\(2.80\text{ Ma}\)) are submitted to the identical likelihood solver, the profile is dead flat.
           </p>
           <p>
             Total likelihood variation across \(K \in [8, 500]\) is a negligible \(0.60\text{ nats}\) (\(\text{LRT } p = 0.25\)). In sparse continental fossil assemblages lacking insular geographic boundaries, carrying capacity is mathematically unidentifiable.
@@ -271,7 +271,7 @@
       <h2>3. Mathematical Formulation &amp; Living BDD Guarantees</h2>
       
       <p>
-        The continuous-time master equation solves for the joint probability vector \(P(t) = [p_0(t), \dots, p_K(t)]^T\) governed by the tridiagonal Metzler generator matrix \(\mathbf{Q}\):
+        The continuous-time Kolmogorov forward system solves for the joint probability vector \(P(t) = [p_0(t), \dots, p_K(t)]^T\) governed by the tridiagonal Metzler generator matrix \(\mathbf{Q}\):
       </p>
       
       $$\frac{d P(t)}{dt} = \mathbf{Q} P(t)$$
@@ -288,7 +288,7 @@
         <strong>Living BDD Specification:</strong> The entire forward simulation and parameter recovery lifecycle is codified as executable behavioral contracts in <code>features/finches_simulation.feature</code>:
         <ul>
           <li><code>Scenario 1</code>: Proves forward Gillespie cladogenesis matches realized finch richness (\(S \in [12, 22]\)) and satisfies the strict topological invariant: an \(S\)-tip tree contains exactly \(S - 1\) branching nodes.</li>
-          <li><code>Scenario 2</code>: Proves the master equation recovers \(\hat{K} = 20.0\) within \(\pm 2\) species and penalizes unconstrained models by \(&gt; 2.0\text{ nats}\).</li>
+          <li><code>Scenario 2</code>: Proves the likelihood solver recovers \(\hat{K} = 20.0\) within \(\pm 2\) species and penalizes unconstrained models by \(&gt; 2.0\text{ nats}\).</li>
           <li><code>Scenario 3</code>: Proves dual-ensemble SBC correctly discriminates bounded ecology from unbounded diversification across 100% of calibration replicates.</li>
         </ul>
       </div>
